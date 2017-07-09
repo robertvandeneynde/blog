@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>{{Unicode, c'est cool|Unicode is cool}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+        img {
+              max-width: 100%
+        }
+        .smallcaps {
+            font-variant: small-caps;
+        }
+        /*kbd {
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            margin: 0 0.2em;
+            box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+            background-color: #f7f7f7;
+        }*/
+        /*
+kbd {
+    font-family: Menlo,Monaco,Consolas,'Courier New',monospace;
+    line-height: 1.57142857;
+    text-transform: capitalize;
+    border-width: 1px 1px 3px 1px;
+    border-style: solid;
+    border-color: #e0e0e0;
+    border-bottom-color: #dbdbdb;
+    border-radius: 5px;
+    background: #f0f0f0 url(http://media02.hongkiat.com/v4s/key_bg.png) repeat-x;
+    text-shadow: 1px 1px #fff;
+    padding: 2px 5px;
+    font-size: 14px;
+    font-size: 1.4rem;
+}*/
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+    </head>
+    <body>
+    {% markdown %}
+# Learn new symbols
+What is unicode, ascii vs unicode.
+
+## Stuff in math
+- 3·2 3⋅2 3×2 **NOT** 3.2 3•2 3x2 &mdash; La croix de multiplication n'a pas la même forme qu'un x, en écriture manuscrite le _x_ se doit d'ailleurs d'être _rond_. Quant à la notation en point, en littérature francophone, la convention est 2.3 mais je préfère la convention anglaise qui met le point au milieu 2·3 à la même hauteur que les autres 2**+**3 2**−**3 2**×**3 2**÷**3. [U+00B7 · <span class="smallcaps">MIDDLE DOT</span> `\cdot` `&middot;`] [U+22C5 ⋅ <span class="smallcaps">DOT OPERATOR</span>] [U+00D7 × <span class="smallcaps">MULTIPLICATION SIGN</span> s`\times`] [U+2022 • <span class="smallcaps">BULLET</span>].
+- 2−1 = −1 **NOT** 2-1 = -1 &mdash; Le tiret **-** utilisé dans les mots-composés n'est pas le même caractère que l'opération de soustraction, le _moins_ de soustraction a la même largeur que le **+** ou le **×**. LaTeX en mode mathématique remplacera les tiret **-** par le signe correct **−**. [U+2212 − <span class="smallcaps">MINUS SIGN</span> `&minus;`]
+- ≥ = ≠ **NOT** >= == != /=
+- 1/2 1÷2 **NOT** 1:2 1⁄2 1∕2 &mdash; See [wikipedia division].(https://en.wikipedia.org/wiki/Division_(mathematics)) where ISO 80000-2-9.6 states **÷** should not be used. The latter two are the _fraction slash_ and the _division slash_ but they do not appear as they should on all browsers, use simple **/**.
+- Vector: LaTeX `\vec{x}` (U+20D7 x⃗ <span class="smallcaps">COMBINING RIGHT ARROW ABOVE</span>)
+- Use Latex! Fractions, intégrales... Everything. Available for pdf, web, svg, **PowerPoint**
+- Flèches: ←↓→↑↙↘↖↗↔⇔ &mdash; [liste ici](http://xahlee.info/comp/unicode_arrows.html)
+- Superscript x² vs x^2
+- Micro µm (U+00B5 µ <span class="smallcaps">MICRO SIGN</span> <a href="https://tex.stackexchange.com/questions/522/best-way-to-typeset-micrometers">LaTeX</a>)
+- ∅ pour l'ensemble vide. Attention en LaTeX `\varnothing` **NOT** `\emptyset` **NOT** `\phi` or other variations. [Wikipedia Empty Set](https://en.wikipedia.org/wiki/Empty_set).
+- ∨∧ ¬ ā **NOT** v \/ /\ ! &mdash; [Wikipedia List](https://en.wikipedia.org/wiki/List_of_logic_symbols)
+- Greek? Change your keyboard layout to Greek! And know the shortcut to quickly change it, on Windows <kbd>Windows+Space</kbd>, on Mac <kbd>Command+Space</kbd> or <kbd>Alt+Space</kbd> or goto control panel to change shortcut, on Linux goto control panel to choose.
+- **⩾** (U+2A7E `\geqslant`). In order to be international, use **≥**. The **⩾** is found in French and Russian litterature.
+- En code, on utilisera bien entendu les caractères ASCII imposés par le langage, on devra donc écrire `== >= != * -`
+
+## Typography
+- Majuscule Accents, no excuses
+- Mot en Majuscule: gras
+- nbsp U+00A0 (html `&nbsp;`) before **:** **;** **«»** **?** **!** (no excuses) (french convention, readable by english). Latex and Word know, nothing to do there. L'espace insécable ne peut pas être passé à la ligne, mettre un nbsp avant un **?** par exemple empêcherait une ligne de commencer par **?**.
+- Guillemet français vs anglais vs droits **« **mot** »** **“**mot**”** **"**mot**"**. All variations will be understood. [Wikipedia Quotation Mark](https://en.wikipedia.org/wiki/Quotation_mark).
+- The dash **-**, the En-dash **–** and the Em-dash **—**. I like the – for spans (lived 1850–1920).[Wikipedia about Dash](https://en.wikipedia.org/wiki/Dash)
+
+## How to type accents ?
+
+- On Mac &amp; Linux if you have a keyboard layout that can type accent but no capital letters with accents: <kbd>Caps Lock</kbd> then <kbd>é</kbd> then <kbd>Caps Lock</kbd> gives you a **É**, the key is a Caps Lock (put all letters in Capital Letter) and not a Shift Lock (act as if Shift was pushed). The latter behaviour is due to the typewritters when the key induced a physical move. On Windows, the Shift Lock behaviour is there. Linux behaviour can of course be changed.
+- On Windows (Microsoft Office only) support for accents via <kbd>Ctrl+'</kbd> then <kbd>E</kbd>, cedilla is <kbd>,</kbd>, Trema/Umlaut is <kbd>"</kbd>.
+
+## How to type any Unicode character, including accents?
+Best methods at the **TOP** of the list:
+
+- On Mac &amp; Linux, your keyboard have probably more symbols (AltGr and AltGrShift are filled with a lot of characters on my keyboard, like <kbd>AltGr+I</kbd> = **→**) or use <em>extended</em> layout with the symbols you want or create yours.
+- On Linux Use Compose key !!! It does not depend on keyboard layout at all, I've mapped it to <kbd>Pause</kbd> because no app uses that. Go in system settings to choose where to map it. Then for example type <kbd>Compose</kbd> then <kbd>'</kbd> then <kbd>e</kbd> gives **é** or <kbd>Compose</kbd> <kbd><</kbd> <kbd><</kbd> gives **«** or <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> gives **≥** and a lot more on [Ubuntu Help](https://help.ubuntu.com/community/ComposeKey).
+- On Android/iOS : long press on a key to get more symbols
+- On Mac (Cocoa App only) long press on a key will pop up
+- On Latex, there is probably a sequence like `\times` for **×**
+- On Html, there is probably a sequence like `&times;` for **×** [Wikipedia List](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)
+- On vim: `digraph`!! That's the same idea as the Compose Key.
+
+- On Any platform: Google the name and copy paste... or go in the OS <em>Character Map</em> app. But use this as a last resort because it is so slow.
+
+### If you know the Unicode codepoint like U+2205
+- On Linux GTK+ App: <kbd>Ctrl+Shift+U</kbd> <kbd>2</kbd> <kbd>2</kbd> <kbd>0</kbd> <kbd>5</kbd> <kbd>Enter</kbd>.
+- On Windows <kbd>Alt</kbd> and <kbd>+ on keypad</kbd> (requires registery setting [Method 1](http://www.fileformat.info/tip/microsoft/enter_unicode.htm) [Method 2](https://www.johndcook.com/blog/2008/08/17/three-ways-to-enter-unicode-characters-in-windows/)) then <kbd>2</kbd> <kbd>2</kbd> <kbd>0</kbd> <kbd>5</kbd>. But prefer other input method it's stupid to memorise the numbers...
+- On Html: `&#x2205;`
+
+### If you know how to write it by hand
+- For LaTeX: [detexify](http://detexify.kirelabs.org/classify.html), then [LaTeX to unicode](http://vikhyat.net/projects/LaTeX_to_unicode/) might work.
+- For Unicode there is (but that's harder): [shapecatcher](http://shapecatcher.com/)
+
+### Notes on French keyboards
+- On French from France Windows keyboard, no way to input Accent directly from keyboard, change to Belgian or use other methods in that list.
+- On Belgian Keyboard there is a dead key for Acute accent **and** Grave accent on <kbd>AltGr+ù</kbd> and <kbd>AltGr+µ</kbd>.
+- None of those keyboards gives you **Ç**.
+    {% endmarkdown %}
+    </body>
+</html>
+

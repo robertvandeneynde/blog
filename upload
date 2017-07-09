@@ -1,0 +1,2 @@
+cd /home/robert/blog
+rsync -r * robertvandeneynde.be:siteperso/blog/
