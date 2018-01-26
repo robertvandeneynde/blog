@@ -1,21 +1,48 @@
-<html>
+<html lang="{{fr|en}}">
   <head>
     <meta charset="utf-8"/>
     <title>{{Blog de Robert Vanden Eynde|Robert Vanden Eynde's blog}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <style>
         img {
             max-width: 100%
         }
+        #wrapper {
+            max-width: 1200px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            padding: 15px;
+            box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+            background: white;
+        }
+        .lang-change {
+            margin-bottom: 10px;
+        }
     </style>
   </head>
   <body>
-    <p>{{Bienvenue sur mon blog, actuellement, lis mes posts facebook, ils sont publics !
-        |Welcome on my blog, currently, read my facebook posts, they are public!.}}</p>
-        
+  <div id="wrapper">
+    <h1>{{Blog de Robert Vanden Eynde|Robert Vanden Eynde's blog}}</h1>
+    <div class="lang-change"><a href="index.{{en|fr}}.html" lang="{{en|fr}}" hreflang="{{en|fr}}">{{English here!|Français ici !}}</a></div>
+
+    <p>{{
+        Bienvenue sur mon blog, voici ci-dessous ma liste d'articles, lis aussi mes posts facebook, ils sont publics ! Un jour je les ajouterai dans la liste ici.
+        |Welcome on my blog, the list below shows the list of articles, read also my facebook posts, they are public! One day I'll add them in the list here.
+    }}</p>
+
+    <h2>{{Articles intemporels|All time articles}}</h2>
+    <ul>
+        <li><a href="unicode/index.{{fr|en}}.html">{{Unicode, c'est cool|Unicode is cool}}</a></li>
+        <li><a href="whatsapp-messenger/index.{{fr|en}}.html">Whatsapp vs Facebook Messenger</a></li>
+        <li><a href="funnycode/index.{{fr|en}}.html">Various programming tricks</a></li>
+    </ul>
+        <!--
         {% markdown %}
 Hello _world_ c'est trop la classe
         {% endmarkdown %}
+        -->
+  </div>
   </body>
 </html>
 

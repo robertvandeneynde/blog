@@ -38,3 +38,4 @@ for filename in os.listdir('.'):
             
         with OutFile("{}.html".format(FR.match(filename).group(1))) as out:
             out.write(RE.sub(lambda m:by_markdown(m.group(1)), content))
+

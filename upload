@@ -1,2 +1,3 @@
 cd /home/robert/blog
-rsync -r * robertvandeneynde.be:siteperso/blog/
+rsync -r * robert@robertvandeneynde.be:siteperso/blog/
+# rsync --links * robert@robertvandeneynde.be:siteperso/blog/
