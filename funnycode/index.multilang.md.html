@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="{{fr|en}}">
+    <!-- generated from .multilang.md.html -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Whatsapp vs Facebook Messenger</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+        img {
+              max-width: 100%
+        }
+        .smallcaps {
+            font-variant: small-caps;
+        }
+        .permalink {
+            margin-left: 0.2em;
+            color: #1166B9;
+        }
+        .lang-change {
+            margin-bottom: 10px;
+        }
+        [id]:not([id=wrapper]) {
+            transition: background linear 1s;
+        }
+        .selected {
+            background: #ffff66;
+        }
+        #wrapper {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+            box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+            background: white;
+        }
+        /*kbd {
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            margin: 0 0.2em;
+            box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+            background-color: #f7f7f7;
+        }*/
+        /*
+        kbd {
+            font-family: Menlo,Monaco,Consolas,'Courier New',monospace;
+            line-height: 1.57142857;
+            text-transform: capitalize;
+            border-width: 1px 1px 3px 1px;
+            border-style: solid;
+            border-color: #e0e0e0;
+            border-bottom-color: #dbdbdb;
+            border-radius: 5px;
+            background: #f0f0f0 url(http://media02.hongkiat.com/v4s/key_bg.png) repeat-x;
+            text-shadow: 1px 1px #fff;
+            padding: 2px 5px;
+            font-size: 14px;
+            font-size: 1.4rem;
+        }*/
+        body {
+            padding: 10px;
+        }
+        code {
+            white-space: nowrap;
+        }
+        </style>
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" /> -->
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+        
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="/parascolaire/utils.js"></script> <!-- for online -->
+        <script src="file:///home/robert/parascolaire/utils.js"></script> <!-- for local -->
+        
+        <link id="stylesheet" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+        <script>
+            $(function(){
+                utils.dedentPreCode()
+                hljs.initHighlightingOnLoad()
+            })
+        </script>
+        
+    </head>
+    <body>
+    <div id="wrapper">
+    {% markdown %}
+    
+# {{Codes Funny|Funny codes}}
+<div class="lang-change"><a href="index.{{en|fr}}.html" lang="{{en|fr}}" hreflang="{{en|fr}}">{{English here!|Français ici !}}</a></div>
+
+Python Counter
+
+<pre><code class="py">
+    from collections import Counter
+    Counter([1,2,3,1,0,2,1,0]) # {0:2, 1:3, 2:2, 3:1}
+</code></pre>
+
+Bash aliases
+
+<pre><code class="bash">
+    alias last-download='ls -d /home/robert/downloads/* --sort=time | head -n 1'
+    alias move-last-download='mv --verbose "$(last-download)" .'
+    alias last-screenshot='ls -d /home/robert/pictures/screenshots/* --sort=time | head -n 1'
+    alias copy-last-screenshot='cp --verbose "$(last-screenshot)" .'
+</code></pre>
+
+    alias copy-last-screenshot='cp --verbose "$(last-screenshot)" .'
+</code></pre>
+
+    alias copy-last-screenshot='cp --verbose "$(last-screenshot)" .'
+</code></pre>
+
+{{Avoir un dossier <code>test</code>|Have a <code>test</code> directory}}
+
+<pre><code class="bash">
+    $ cd test
+    $ . today
+    created directory Thursday-01-Mar-2018
+    $ cd Thursday-01-Mar-2018
+</code></pre>
+
+<p>Remarquez que <code>. today</code> peut aussi être écrit <code>source today</code> ou <code>. today</code> ou <code>. ./today</code>.
+
+<p>Ensuite, voici le contenu du fichier <code>today</code>:
+
+<pre><code class="bash">
+#!/bin/bash
+
+d=$(LC_ALL=en date +%a-%d-%b-%Y)
+echo "$d"
+if [ -d "$d" ]; then
+    echo "Existing dir"
+else
+    mkdir "$d"
+fi
+cd "$d"
+</code></pre>
+
+<p>Le <code>LC_ALL=en</code> est pour forcer que le jour soit en anglais, mais vous pouvez mettre fr aussi.

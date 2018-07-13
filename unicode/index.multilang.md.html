@@ -128,34 +128,60 @@
     <div id="wrapper">
     {% markdown %}
 # {{Apprendre de nouveaux caractères|Learn new characters}} – Unicode
-<div class="lang-change"><a href="unicode.{{en|fr}}.html" lang="{{en|fr}}" hreflang="{{en|fr}}">{{English here!|Français ici !}}</a></div>
+<div class="lang-change"><img src="../flag-{{en|fr}}.png"/> <a href="index.{{en|fr}}.html" lang="{{en|fr}}" hreflang="{{en|fr}}">{{English here!|Français ici !}}</a></div>
 
-{{Savais-tu que tu pouvais tapper plus de caractères que ceux qui sont sur ton clavier ? Apprends à quand il est plus clair de les utiliser.|Did you know you can type way more characters than what is on your keyboard? Learn when to use them.}}
+{{Savais-tu que tu pouvais tapper plus de caractères que ceux qui sont sur ton clavier ? Apprends à quand il est plus clair de les utiliser.
+| Did you know you can type way more characters than what is on your keyboard? Learn when to use them.}}
 
 <span id="unicode"><span id="ascii">
-{{Chaque caractère dans le monde informatique correpond à un nombre, par example `A` vaut 65, `a` vaut 97, `é` vaut 233, la lettre grecque `α` vaut 945.|Each character in the computer world has a number, for example `A` is 65, `a` is 97, `é` is 233, the greek letter `α` is 945.}}
-{{Ce nombre est appelé le _point de code **Unicode**_. Tu as peut-être entendu parler de code ASCII. US-ASCII est vieux et créé par des américains, il représente seulement les 128 premiers caractères, donc 65 pour `A` est un code ASCII et un code Unicode, mais 945 pour `α` n'existait pas à l'époque d'ASCII.|This number is called the _**Unicode** code point_. You may have heard of *ASCII*, US-ASCII code is old and created by Americans, it represents only the first 128 characters, so 65 for `A` is an ASCII code and Unicode code, but 945 for `α` did not exist at the time of ASCII.}}
+{{Chaque caractère dans le monde informatique correpond à un nombre, par example `A` vaut 65, `a` vaut 97, `é` vaut 233, la lettre grecque `α` vaut 945.
+| Each character in the computer world has a number, for example `A` is 65, `a` is 97, `é` is 233, the greek letter `α` is 945.}}
+{{Ce nombre est appelé le _point de code **Unicode**_. Tu as peut-être entendu parler de code ASCII. US-ASCII est vieux et créé par des américains,
+    il représente seulement les 128 premiers caractères, donc 65 pour `A` est un code ASCII et un code Unicode,
+    mais 945 pour `α` n'existait pas à l'époque d'ASCII.
+| This number is called the _**Unicode** code point_.
+    You may have heard of *ASCII*, US-ASCII code is old and created by Americans,
+    it represents only the first 128 characters, so 65 for `A` is an ASCII code and Unicode code,
+    but 945 for `α` did not exist at the time of ASCII.}}
 </span></span>
 
 <span id="table"><span id="u-plus">
 {{Quand on parle d'un point de code Unicode comme 945, tout le monde aime utiliser la notation standard *U+xxxx* où *xxxx* est le code en [hexadécimal](https://fr.wikipedia.org/wiki/Hexadécimal).
- |When one talks about a unicode code point like 945, everyone likes to write the standard *U+xxxx* notation where *xxxx* is the code in [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal).}}
-{{La lettre `é` est donc appelée U+00E9 car E9 est l'hexadécimal de 233 en décimal. | The letter `é` is then called U+00E9 because E9 in hexadecimal is 233 in decimal.}}
-{{Des tables|Tables}} [{{existent|exist}}](https://en.wikibooks.org/wiki/Unicode/Character_reference/0000-0FFF) {{avec la liste de tous les caractères|with the list of all characters}}. Unicode donne aussi un nom unique en anglais n'utilisant que les caractères A-Z et les tirets comme <em class="smallcaps">LATIN SMALL LETTER E WITH ACUTE</em> pour <em>é</em>.
+| When one talks about a unicode code point like 945, everyone likes to write the standard *U+xxxx* notation where *xxxx* is the code in [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal).}}
+{{La lettre `é` est donc appelée U+00E9 car E9 est l'hexadécimal de 233 en décimal.
+| The letter `é` is then called U+00E9 because E9 in hexadecimal is 233 in decimal.}}
+{{Des tables|Tables}} [{{existent|exist}}](https://en.wikibooks.org/wiki/Unicode/Character_reference/0000-0FFF)
+{{avec la liste de tous les caractères|with the list of all characters}}.
+Unicode donne aussi un nom unique en anglais n'utilisant que les caractères A-Z et
+les tirets comme <em class="smallcaps">LATIN SMALL LETTER E WITH ACUTE</em> pour <em>é</em>.
 </span></span>
 
 <span id="encoding"><span id="utf-8">
-{{Pour encoder un ou plusieurs charactères en une séquence d'[octet](https://fr.wikipedia.org/wiki/Octet), on a besoin d'un encodage comme le très populaire *utf-8*.|To encode one or more characters in sequence of [bytes](https://en.wikipedia.org/wiki/Octet_(computing)), one must use an encoding like the very popular and used broadly *utf-8*.}}
-{{Pour une histoire plus détaillée, allez|For a longer story, come}} [{{ici|here}}](https://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16).
-{{Une référence sur Internet est également ce|A reference on the Internet is also this}}[blog-post](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
+{{Pour encoder un ou plusieurs charactères en une séquence d'[octet](https://fr.wikipedia.org/wiki/Octet),
+    on a besoin d'un encodage comme le très populaire *utf-8*.
+| To encode one or more characters in sequence of [bytes](https://en.wikipedia.org/wiki/Octet_(computing)),
+    one must use an encoding like the very popular and used broadly *utf-8*.}}
+{{Pour une histoire plus détaillée, allez | For a longer story, come}}
+[{{ici|here}}](https://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16).
+{{Une référence sur Internet est également ce | A reference on the Internet is also this}}
+[blog post](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
 </span></span>
 
-{{Unicode est bien plus complexe que juste décider d'un nombre pour chaque caractère, il parle aussi des|Unicode is much more complex than just choosing number for each character, it features}}
-bidirectional characters, combining characters, CJK (*C*{{hinois|hinese}}, *J*{{aponais|apanese}}, *K*{{oréen|orean}}) characters, emoji, normalization, {{et plein d'autres|and much more}}.
+{{Unicode est bien plus complexe que juste décider d'un nombre pour chaque caractère, il parle aussi des
+|Unicode is much more complex than just choosing number for each character, it features}}
+bidirectional characters, combining characters, CJK (*C*{{hinois|hinese}}, *J*{{aponais|apanese}}, *K*{{oréen|orean}}) characters,
+**emoji**, normalization,
+{{et plein d'autres|and much more}}.
 
 <span id="share">
-{{Sur cette page, je vous parle de plein de caractères qui peuvent vous être utile et comment les tapper de manière **rapide**, **facile** et que l'on peut **facilement retenir**|On this page|I show you here some characters that can be handy for you to use and how to type them **rapidly**, **easily** and **easy to remember**}}.
-{{N'hésitez pas à partager un paragraphe en particulier en faisant un clic droit ou long press sur un des nombreux [#hashtag](#share) et donner le lien à vos amis ou colllègues !|Do not hesitate to share a specific paragraph by right clicking on one of the numerous #hashtag and give the link to your friends or collegues!}}
+{{Sur cette page, je vous parle de plein de caractères qui peuvent vous être utile et comment les tapper de manière 
+    **rapide**, **facile** et que l'on peut **facilement retenir**
+| On this page|I show you here some characters that can be handy for you to use and how to type them
+    **rapidly**, **easily** and **easy to remember**}}.
+{{N'hésitez pas à partager un paragraphe en particulier en faisant un clic droit ou long press sur un des nombreux
+    [#hashtag](#share) et donner le lien à vos amis ou colllègues !
+| Do not hesitate to share a specific paragraph by right clicking on one of the numerous
+    [#hashtag](#share) and give the link to your friends or collegues!}}
 </span>
 
 <nav>
@@ -163,37 +189,127 @@ bidirectional characters, combining characters, CJK (*C*{{hinois|hinese}}, *J*{{
 </nav>
 
 ## <span id="stuff-in-math">{{Trucs de math|Stuff in math}}</span>
-- <span id="latex">{{Utilise|Use}} [LaTeX](https://www.sharelatex.com/learn/Learn_LaTeX_in_30_minutes){{ |}}! {{Des fractions comme|Fractions like}} `\frac{1}{1+x}`, {{intégrales comme|integrals like}} `\int_{1}{x} x^2 dx`, {{symboles comme|symbols like}} `\iff`... {{Tout y est|Everything is there}}. {{Disponible pour|Available for}} pdf, [web](https://www.mathjax.org/), svg, **PowerPoint**.</span>
+- <span id="latex">{{Utilise|Use}}
+    [LaTeX](https://www.sharelatex.com/learn/Learn_LaTeX_in_30_minutes){{ |}}!
+    {{Des fractions comme|Fractions like}}
+    `\frac{1}{1+x}`,
+    {{intégrales comme|integrals like}}
+    `\int_{1}{x} x^2 dx`,
+    {{symboles comme|symbols like}} `\iff`...
+    {{Tout y est|Everything is there}}.
+    {{Disponible pour|Available for}} pdf,
+    [web](https://www.mathjax.org/), svg, **PowerPoint**.
+</span>
 
-- <span id="middot">3·2 3⋅2 3×2 **{{PAS|NOT}}** 3.2 3•2 3x2 — {{La croix de multiplication n'a pas la même forme qu'un x, en écriture manuscrite le _x_ se doit d'ailleurs d'être _rond_|The multiplication cross does not have the same shape as a x, in handwriting the _x_ should be _rounded_}} (<img src="x-rounded.svg"/>). {{Quant à la notation en point, en littérature francophone, la convention est 2.3 mais je préfère la convention anglaise qui met le point au milieu 2·3 à la même hauteur que les autres|In french letterature, the multiplication may be noted 2.3 but I prefer to use the English convention that has the dot in the middle 2·3 such that the height is the same as the others}} 2**+**3 2**−**3 2**×**3 2**÷**3. U+00B7 · <span class="smallcaps">MIDDLE DOT</span> `\cdot` `&middot;`, U+22C5 ⋅ <span class="smallcaps">DOT OPERATOR</span>, U+00D7 × <span class="smallcaps">MULTIPLICATION SIGN</span> `\times`, U+2022 • <span class="smallcaps">BULLET</span>.</span>
+- <span id="middot">3 · 2, 3 ⋅ 2 ou 3 × 2 **{{PAS|NOT}}** 3 . 2, 3.2, 3•2, 3x2 —
+    {{La croix de multiplication n'a pas la même forme que la lettre *x*, en écriture manuscrite le _x_ se doit d'ailleurs d'être _rond_
+    |The multiplication cross does not have the same shape as a x, in handwriting the _x_ should be _rounded_}}
+    (<img src="x-rounded.svg"/>).
+    {{Quant à la notation en point, en littérature francophone,
+        la convention est 2.3 mais je préfère la convention anglaise qui met
+        le point au milieu 2·3 à la même hauteur que les autres
+    |In french litterature, the multiplication may be noted 2.3
+        but I prefer to use the English convention that has the dot in the middle
+        2·3 such that the height is the same as the others}}
+    2**+**3, 2**−**3, 2**×**3 {{ou|or}} 2**÷**3.
+    U+00B7 · <span class="smallcaps">MIDDLE DOT</span> `\cdot` `&middot;`,
+    U+22C5 ⋅ <span class="smallcaps">DOT OPERATOR</span>,
+    U+00D7 × <span class="smallcaps">MULTIPLICATION SIGN</span> `\times`,
+    U+2022 • <span class="smallcaps">BULLET</span>.
+</span>
 
-- <span id="minus">2−1 = −1 **{{PAS|NOT}}** 2-1 = -1 &mdash; {{Le tiret|The dash}} **-** {{utilisé dans les mots-composés n'est pas le même caractère que l'opération de soustraction|used in compound words in French and other langauges is not the same as the one from the substraction operation}}, {{le _moins_ de soustraction a la même largeur que le **+** ou le **×**|the _minus_ used in substraction has the same width as the **+** or the **×**}}. {{LaTeX en mode mathématique remplacera les tiret **-** par le signe correct **−**|LaTeX in math mode will replace the simple dash **-** by the correct sign **−**}}. U+2212 − <span class="smallcaps">MINUS SIGN</span> `&minus;`.</span>
+- <span id="minus">2−1 = −1 **{{PAS|NOT}}** 2-1 = -1 &mdash;
+    {{Le tiret|The dash}} **-**
+    {{utilisé dans les mots-composés n'est pas le même caractère que l'opération de soustraction
+    | used in compound words in French and other langauges is not the same as the one from the substraction operation}},
+    {{le _moins_ de soustraction a la même largeur que le **+** ou le **×**
+    | the _minus_ used in substraction has the same width as the **+** or the **×**}}.
+    {{LaTeX en mode mathématique remplacera les tiret **-** par le signe correct **−**
+    | LaTeX in math mode will replace the simple dash **-** by the correct sign **−**}}.
+    U+2212 − <span class="smallcaps">MINUS SIGN</span> `&minus;`.
+</span>
 
-- <span id="leq"><span id="geq"><span id="ne">≥ = ≠ **{{PAS|NOT}}** >= == != /= &mdash; {{Évidement, en code, on se devra d'utiliser les bons caractères. Cependant si vous ne savez vraiment pas entrer de caractère unicode (ce qui ne devrait pas arriver vu que vous lisez cet article), préférez `!=` à `/=` car en programmation `/=` a une autre signification liée à la division|Of course, when writing code, one must use the correct characters. However when you can't input unicode character (which would almost never happen because you read this article), consider using `!=` over `/=` because the `/=` has a different meaning in programming.}}</span></span></span>
+- <span id="leq"><span id="geq"><span id="ne">≥ = ≠ **{{PAS|NOT}}** >= == != /= &mdash;
+    {{Évidement, en code, on se devra d'utiliser les bons caractères.
+    Cependant si vous ne savez vraiment pas entrer de caractère unicode (ce qui ne devrait pas arriver vu que vous lisez cet article),
+    préférez `!=` à `/=` car en programmation `/=` a une autre signification liée à la division
+    | Of course, when writing code, one must use the correct characters.
+    However when you can't input unicode character
+    (which would almost never happen because you read this article),
+    consider using `!=` over `/=` because the `/=` has a different meaning in programming.}}
+</span></span></span>
 
-- <span id="divide">1/2 1÷2 **{{PAS|NOT}}** 1:2 1⁄2 1∕2 — {{Voir|See}} [wikipedia division](https://en.wikipedia.org/wiki/Division_%28mathematics%29) {{où ISO 80000-2-9.6 dit que **÷** ne devrait pas être utilisé, les deux derniers sont le _fraction slash_ et le _division slash_ mais ils n'apparaissent pas bien dans tous les browsers donc utilisez plutot le simple **/** ou les caractères de fraction ci-dessous. Quant à 1:2 cette convention n'est pas internationale et risque d'être confondue avec autre chose par des américains par exemple|where ISO 80000-2-9.6 states **÷** should not be used, the latter two are the _fraction slash_ and the _division slash_ but they do not appear as they should on all browsers, use simple **/** or the fraction characters below. The 1:2 notation is not international and americans for instance could misinterpret it}}.</span>
+- <span id="divide">1/2 1÷2 **{{PAS|NOT}}** 1:2 1⁄2 1∕2 —
+    {{Voir|See}} [wikipedia division](https://en.wikipedia.org/wiki/Division_%28mathematics%29)
+    {{où ISO 80000-2-9.6 dit que **÷** ne devrait pas être utilisé,
+    les deux derniers sont le _fraction slash_ et le _division slash_ mais ils n'apparaissent pas bien dans tous les browsers
+    donc utilisez plutot le simple **/** ou les caractères de fraction ci-dessous.
+    Quant à 1:2 cette convention n'est pas internationale et risque d'être confondue avec autre chose par des américains par exemple
+    |where ISO 80000-2-9.6 states **÷** should not be used, the latter two are the _fraction slash_ and the _division slash_ but they
+    do not appear as they should on all browsers, use simple **/** or the fraction characters below.
+    The 1:2 notation is not international and americans for instance could misinterpret it}}.
+</span>
 
-- <span id="fraction">½ ¼ ⅓ {{ quand vous trouvez plus clair que d'écrire 1/2 ou 3/4 ou 1/3| when you find it more clear than writing 1/2 or 1/4 or 1/3}}. {{Liste|List}} [{{ici|here}}](http://unicodefractions.com/).</span>
+- <span id="fraction">½ ¼ ⅓
+    {{ quand vous trouvez plus clair que d'écrire 1/2 ou 3/4 ou 1/3
+    | when you find it more clear than writing 1/2 or 1/4 or 1/3}}.
+    {{Liste|List}} [{{ici|here}}](http://unicodefractions.com/).
+</span>
 
-- <span id="vector">Vector: LaTeX `\vec{x}` U+20D7 x⃗ <span class="smallcaps">COMBINING RIGHT ARROW ABOVE</span>. {{C'est un caractère de [combinaison](https://en.wikipedia.org/wiki/Combining_character), il doit être placé après le caractère qu'il veut décorer.|It's a [combining character](https://en.wikipedia.org/wiki/Combining_character), it must be placed after the character that will be decorated.}}</span>
+- <span id="vector">Vector: LaTeX `\vec{x}` U+20D7 x⃗ <span class="smallcaps">COMBINING RIGHT ARROW ABOVE</span>.
+    {{C'est un caractère de [combinaison](https://en.wikipedia.org/wiki/Combining_character),
+    il doit être placé après le caractère qu'il veut décorer.
+    |It's a [combining character](https://en.wikipedia.org/wiki/Combining_character),
+    it must be placed after the character that will be decorated.}}
+</span>
 
-- <span id="arrows"><span id="larr"><span id="rarr"><span id="uarr"><span id="darr">{{Flèches :|Arrows:}} ←↓→↑↙↘↖↗↔⇔↦ — [{{liste|list}} {{ici|here}}](http://xahlee.info/comp/unicode_arrows.html).</span></span></span></span></span>
+- <span id="arrows"><span id="larr"><span id="rarr"><span id="uarr"><span id="darr">{{Flèches :|Arrows:}} ←↓→↑↙↘↖↗↔⇔↦ —
+    [{{liste|list}} {{ici|here}}](http://xahlee.info/comp/unicode_arrows.html).
+</span></span></span></span></span>
 
-- <span id="sup">x² **{{PAS|NOT}}** x^2 — latex `x^2`, html `x<sup>2</sup>`. {{Il y a aussi|There are also}} ⁰¹²³⁴⁵⁶⁷⁸⁹⁺₊⁻₋ {{et|and}} [{{bien d'autres|others}}](https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts).</span>
+- <span id="sup">x² **{{PAS|NOT}}** x^2 — latex `x^2`, html `x<sup>2</sup>`.
+    {{Il y a aussi|There are also}} ⁰¹²³⁴⁵⁶⁷⁸⁹⁺₊⁻₋ {{et|and}}
+    [{{bien d'autres|others}}](https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts).
+</span>
 
-- <span id="plusmn">± latex `\pm`, html `&plusmn;`. U+00B1 ± PLUS-MINUS SIGN.</span>
+- <span id="plusmn">± latex `\pm`, html `&plusmn;`.
+    U+00B1 ± PLUS-MINUS SIGN.
+</span>
 
-- <span id="micro">Micro µm (U+00B5 µ <span class="smallcaps">MICRO SIGN</span> [LaTeX](https://tex.stackexchange.com/questions/522/best-way-to-typeset-micrometers)).</span>
+- <span id="micro">Micro {{comme dans|like in}} µm
+    (U+00B5 µ <span class="smallcaps">MICRO SIGN</span> [LaTeX](https://tex.stackexchange.com/questions/522/best-way-to-typeset-micrometers)).
+</span>
 
-- <span id="empty">∅ {{pour l'ensemble vide|for the empty set}}. {{Attention en|Beware in}} LaTeX `\varnothing` **{{PAS|NOT}}** `\emptyset` **{{PAS|NOT}}** `\phi` {{ou autres variations|or other variations}}. [Wikipedia Empty Set](https://en.wikipedia.org/wiki/Empty_set).</span>
+- <span id="empty">∅ {{pour l'ensemble vide|for the empty set}}.
+    {{Attention en|Beware in}} LaTeX `\varnothing` **{{PAS|NOT}}** `\emptyset` **{{PAS|NOT}}** `\phi`
+    {{ou autres variations|or other variations}}. [Wikipedia Empty Set](https://en.wikipedia.org/wiki/Empty_set).
+</span>
 
-- <span id="logic"><span id="or"><span id="and"><span id="not">∨∧ ¬ ā **{{PAS|NOT}}** v \/ /\ ! — [Wikipedia List](https://en.wikipedia.org/wiki/List_of_logic_symbols).</span></span></span></span>
+- <span id="logic"><span id="or"><span id="and"><span id="not">
+    ∨∧ ¬ ā **{{PAS|NOT}}** v \/ /\ ! —
+    [Wikipedia List](https://en.wikipedia.org/wiki/List_of_logic_symbols).
+</span></span></span></span>
 
-- <span id="greek">{{Grec ? Change ton clavier en grec ! Et apprends le raccourci pour vite le changer, sur Windows, <kbd>Windows+Space</kbd>, sur Mac <kbd>Command+Space</kbd> ou <kbd>Alt+Space</kbd> ou aller dans les paramètres système pour changer le raccourci, sur Linux allez dans les paramètres systèmes pour choisir.|Greek? Change your keyboard layout to Greek! And know the shortcut to quickly change it, on Windows <kbd>Windows+Space</kbd>, on Mac <kbd>Command+Space</kbd> or <kbd>Alt+Space</kbd> or goto control panel to change shortcut, on Linux goto control panel to choose.}}</span>
+- <span id="greek">
+    {{Grec ? Change ton clavier en grec ! Et apprends le raccourci pour vite le changer, sur Windows, <kbd>Windows+Space</kbd>,
+    sur Mac <kbd>Command+Space</kbd> ou <kbd>Alt+Space</kbd> ou aller dans les paramètres système pour changer le raccourci,
+    sur Linux allez dans les paramètres systèmes pour choisir.|Greek? Change your keyboard layout to Greek! And know the shortcut to quickly change it,
+    on Windows <kbd>Windows+Space</kbd>, on Mac <kbd>Command+Space</kbd> or <kbd>Alt+Space</kbd> or goto control panel to change shortcut,
+    on Linux goto control panel to choose.}}
+</span>
 
-- <span id="leqslant"><span id="geqslant">1** ⩽ **2, 2** ⩾ **1 (U+2A7D `\leqslant`, U+2A7E `\geqslant`). {{Afin d'être international, utilise|In order to be international, use}} **&leq;** **≥**. {{Les|The}} **⩽** **⩾** {{sont utilisés en littérature françaises et russes.|are found in French and Russian litterature.}}</span></span>
+- <span id="leqslant"><span id="geqslant">
+    1** ⩽ **2, 2** ⩾ **1 (U+2A7D `\leqslant`, U+2A7E `\geqslant`).
+    {{Afin d'être international, utilise|In order to be international, use}} **&leq;** **≥**.
+    {{Les|The}} **⩽** **⩾** {{sont utilisés en littérature françaises et russes.|are found in French and Russian litterature.}}
+</span></span>
 
-- <span id="code"><span id="=="><span id=">="><span id="&lt;="><span id="!=">{{En code dans un langage de programmation, on utilisera bien entendu les caractères ASCII imposés par le langage, on devra donc écrire|When coding in a programming langauge, one will of course use the ASCII characters forced by the language, one will then write}} `>= == != * -` {{ et pas | and not }} `≥ = ≠ × · −` ({{uniquement valable pour le code !|only true for code!}}).</span></span></span></span></span>
+- <span id="code"><span id="=="><span id=">="><span id="&lt;="><span id="!=">
+    {{En code dans un langage de programmation, on utilisera bien entendu les caractères ASCII imposés par le langage, on devra donc écrire
+    | When coding in a programming langauge, one will of course use the ASCII characters forced by the language, one will then write}}
+    `>= == != * -` {{ et pas | and not }} `≥ = ≠ × · −`
+    ({{uniquement valable pour le code !|only true for code!}}).
+</span></span></span></span></span>
 
 ## <span id="languages">{{Beaucoup de langues|Lots of languages}}</span>
 The aim of Unicode is to easily manage every language of the word, even the old/anciant ones.
@@ -231,26 +347,77 @@ Diacritics are also part of Unicode:
 Different currency symbols are useful: `$ € ¥ ¢ ¤ ₿ ₽ ฿ ₹`. List [on wikipedia](https://en.wikipedia.org/wiki/Currency_symbol).
 
 ## <span id="typography">{{Typographie|Typography}}</span>
-- <span id="caps-accents">{{Mettre **toujours** les accents sur les majuscules, [aucunes excuses](#type-accents). Et l'Académie française est clairement [en faveur de cette pratique](http://www.academie-francaise.fr/questions-de-langue#5_strong-em-accentuation-des-majuscules-em-strong), si tu ne veux même pas croire l'Académie française, je ne sais pas qui tu peux suivre en terme d'exactitude de la langue française...|**Always** put accents on capital letters, [no excuses](#type-accents). And the Académie Française [strongly recommends it](http://www.academie-francaise.fr/questions-de-langue#5_strong-em-accentuation-des-majuscules-em-strong), if you don't trust the Académie française, I don't know who you will follow with regards to language of French correctness...}} {{Le fait d'accepter des majuscules sans accents date de l'époque de la **Machine à écrire** où c'était mécaniquement impossible, la Machine à écrire, c'était il y a 30 ans non ?|Accepting capital letters without accents dates from the **typewritter era** when it was mechanically impossible to have them, the typewritters era, it was 30 years ago wasn't it?}} {{Cependant sur les prénoms et noms de famille, chacun choisit comment on écrit son nom, ainsi demander à une *Elise* si elle veut un accent sur son *E* est une question tout à fait acceptable.|However on first names and last name, everyone can choose how his or her name can be written, asking a French *Elise* if she wants to write an accent on her *E* is a totally acceptable question.}}</span>
-- <span id="small-caps"><span id="strong-caps">{{Pour mettre en évidence un mot, ne pas le mettre en MAJUSCULE, le mettre en **gras**. Cependant, la mise en majuscule permet parfois d'augmenter la lisibilité. Ne pas mettre d'accent sur les majuscules au contraire diminue la lisibilité.|To emphasize on a word, do not write it iin CAPS, put it in **bold**. However, caps are sometimes easier to read. On the contrary, omitting accents on capital letters makes it harder to read.}} Une autre alternative est de simplement mettre la première lettre en majuscule ou d'utiliser les <span class="smallcaps">petites capitales</span>, disponibles en CSS via `font-variant: small-caps`.</span></span>
-- <span id="nbsp">{{L'espace insécable ou en anglais <em>non-breaking space</em>|The non breaking space}} (nbsp) (U+00A0) (html `&nbsp;`). {{Cette espace spéciale (nom [féminin](https://www.druide.com/fr/enquetes/un-espace-ou-une-espace)) ne peut pas être cassée pour passer à la ligne, mettre un nbsp avant un **?** par exemple empêcherait une ligne de commencer par **?**.|This special space can not be split in two to do a line break, to put a non breaking space before a **?** is useful to have a space but being impossible for a line to begin with **?**.}} {{ Elle doit être mise avant|It must be written before}} **:** **;** **?** **!** {{et au milieu des|and between the}} **«»** ({{c'est une convention française de France, en anglais ou en québéquois, on ne met pas d'espace|That's a french from France convention, in English and French from Canada one does not put a space}}). {{Latex et word sont au courant, rien à faire à ce niveau là|Latex and Word know, nothing to do there}}. In CSS, for presentation purpose, one can also use `white-space: nowrap`.</span>
+- <span id="caps-accents">
+    {{ **Toujours** mettre les accents sur les majuscules, [aucunes excuses](#type-accents).
+        L'Académie française est clairement [en faveur de cette pratique](http://www.academie-francaise.fr/questions-de-langue#5_strong-em-accentuation-des-majuscules-em-strong),
+        si tu ne veux même pas croire l'Académie française, je ne sais pas qui tu peux suivre en terme d'exactitude de la langue française.
+    | **Always** put accents on capital letters, [no excuses](#type-accents).
+        The Académie Française [strongly recommends it](http://www.academie-francaise.fr/questions-de-langue#5_strong-em-accentuation-des-majuscules-em-strong), if you don't trust the Académie française,
+        I don't know who you will follow with regards to language of French correctness.}}
+    {{ Le fait d'accepter des majuscules sans accents date de l'époque de la **Machine à écrire**
+        où c'était mécaniquement impossible, la Machine à écrire, c'était il y a 30 ans non ?
+    | Accepting capital letters without accents dates from the **typewritter era**
+        when it was mechanically impossible to have them, the typewritters era, it was 30 years ago wasn't it?}}
+    {{ Cependant sur les prénoms et noms de famille,
+        chacun choisit comment on écrit son nom, ainsi demander à une *Elise* si elle veut un accent sur son *E* est une question tout à fait acceptable.
+    | However on first names and last name, everyone can choose how his or her name can be written,
+        asking a French *Elise* if she wants to write an accent on her *E* is a totally acceptable question.}}
+</span>
+
+- <span id="small-caps"><span id="strong-caps">{{Pour mettre en évidence un mot, ne pas le mettre en MAJUSCULE, le mettre en **gras**. Cependant, la mise en majuscule permet parfois d'augmenter la lisibilité. Ne pas mettre d'accent sur les majuscules au contraire diminue la lisibilité.|To emphasize on a word, do not write it in CAPS, put it in **bold**. However, caps are sometimes easier to read. On the contrary, omitting accents on capital letters makes it harder to read.}} Une autre alternative est de simplement mettre la première lettre en majuscule ou d'utiliser les <span class="smallcaps">petites capitales</span>, ce qui marche aussi avec une <span class="smallcaps">Majuscule</span>. Les petites majuscules sont disponibles en CSS via `font-variant: small-caps` ou sous Microsoft Word ([ici](http://tipsforwordprocessing.com/microsoft-word-2003-small-caps.html) ou [là](http://www.01net.com/astuces/word-utiliser-de-petites-majuscules-astuce-574047.html)).</span></span>
+
+- <span id="nbsp">
+    {{L'espace insécable ou en anglais <em>non-breaking space</em>|The non breaking space}}
+    (nbsp) (U+00A0) (html `&nbsp;`).
+    {{Cette espace spéciale (nom [féminin](https://www.druide.com/fr/enquetes/un-espace-ou-une-espace)) ne peut pas être cassée pour passer à la ligne, mettre un nbsp avant un **?** par exemple empêcherait une ligne de commencer par **?**.
+    | This special space can not be split in two to do a line break, to put a non breaking space before a **?** is useful to have a space but being impossible for a line to begin with **?**.}}
+    {{ Elle doit être mise avant|It must be written before}}
+    **:** **;** **?** **!**
+    {{et au milieu des|and between the}}
+    **«»**
+    ({{c'est une convention française de France, en anglais ou en québéquois, on ne met pas d'espace|That's a french from France convention, in English and French from Canada one does not put a space}}).
+    {{Latex et word sont au courant, rien à faire à ce niveau là|Latex and Word know, nothing to do there}}.
+    In CSS, for presentation purpose, one can also use `white-space: nowrap`.</span>
+
 - <span id="guillemet"><span id="quote">{{Guillemet français vs guillemets anglais vs guillemets droits|French guillemet vs English quotes vs straight quotes}} **« **{{mot|word}}** »** **“**{{mot|word}}**”** **"**{{mot|word}}**"**. {{Toutes les variations seront comprises.|All variations will be understood.}} [Wikipedia Quotation Mark](https://en.wikipedia.org/wiki/Quotation_mark).</span></span>
+
 - <span id="mdash"><span id="ndash"><span id="dash">{{Le tiret (*dash* en anglais)|The dash}} **-**, {{le|the}} En-dash **–** {{et le|and the}} Em-dash **—** {{sont des tirets de longeurs différentes|are different length of dashes}}. {{En français le En-dash est appelé *tiret moyen* et le Em-dash est appelé *tiret long* ou *tiret cadratin*.|}} {{J'aime utiliser le En-dash pour les intervalles comme (vivant 1850–1920)|I like using the En-dash for spans (lived 1850–1920)}}. {{Les Em-dash sont utilisés dans les livres pour les [dialogues](https://en.wikipedia.org/wiki/Quotation_mark#Quotation_dash)|Em-dash are used in books in [dialogues](https://en.wikipedia.org/wiki/Quotation_mark#Quotation_dash).}}. [Wikipedia about Dash](https://en.wikipedia.org/wiki/Dash), [Wikipedia sur le Tiret](https://fr.wikipedia.org/wiki/Tiret). {{Ne pas confondre avec le|Do not mix up with the}} [{{signe moins|minus sign}}](#minus).</span></span></span>
+
 - Mettre du texte en majuscule pour attirer l'attention, par exemple sur une vidéo youtube, est une pratique je déplore.
-- Il se doit de mettre une espace (nom [féminin](https://www.druide.com/fr/enquetes/un-espace-ou-une-espace)) à l'extérieur des parenthèses mais jamais à l'intérieur, ainsi on écrira <strong style="color:#090; white-space: nowrap;">Hello (bonjour) Alice</strong> et non <strong style="color:red; white-space: nowrap;">Hello ( bonjour ) Alice</strong>. Cependant en math, dans le contexte de fonction, on ne met pas d'espace avant la parenthèse ouvrante. On écrira <strong style="color:#090; white-space: nowrap;">sin(x)</strong> et non <strong style="color:red; white-space: nowrap;">sin (x)</strong>. Le dernier pourrait être confondu avec une multiplication. Latex et word sont au courant, rien à faire à ce niveau là.
+
+- Il se doit de mettre une espace (nom [féminin](https://www.druide.com/fr/enquetes/un-espace-ou-une-espace))
+    à l'extérieur des parenthèses mais jamais à l'intérieur,
+    ainsi on écrira <strong style="color:#090; white-space: nowrap;">Hello (bonjour) Alice</strong>
+    et non <strong style="color:red; white-space: nowrap;">Hello ( bonjour ) Alice</strong>.
+    Latex et word sont au courant, rien à faire à ce niveau là.
+    Cependant en math, dans le contexte de fonction, on ne met pas d'espace avant la parenthèse ouvrante.
+    On écrira <strong style="color:#090; white-space: nowrap;">sin(x)</strong>
+    et non <strong style="color:red; white-space: nowrap;">sin (x)</strong>,
+    le dernier pourrait être confondu avec une multiplication.
 
 ## <span id="type-accents">{{Comment tapper des accents ?|How to type accents?}}</span>
 
-- {{Sur Linux et (certains) Mac, si tu as un clavier qui peut tapper des accents mais pas des majuscules avec accents : | On Linux and (some) Mac, if you have a keyboard layout that can type accent but no capital letters with accents: }} <kbd>Caps Lock</kbd> {{puis|then}} <kbd>é</kbd> {{puis|then}} <kbd>Caps Lock</kbd> {{te donne un | gives you a }} **É**, {{la touche est un *Caps Lock* (qui met toutes les lettres en majuscule) et non un *Shift Lock* (qui fait comme si <kbd>Shift</kbd> était enfoncée). Ce dernier comportement vient des Machines à écrire où la touche correspondait à un déplacement physique. Sur Windows, c'est le comportement Shift Lock. Voici [un clavier français de France](https://majusculesaccentuées.fr/) avec ce comportement. Sur Linux on peut bien sûr changer le comportement. | the key is a Caps Lock (put all letters in Capital Letter) and not a Shift Lock (act as if Shift was pressed). The latter behaviour is due to the typewritters when the key induced a physical move. On Windows, the Shift Lock behaviour is used. [Here is French from France keyboard layout](https://majusculesaccentuées.fr/) with the Caps Lock behaviour. Linux behaviour can of course be changed. }}
+- {{Sur Linux et (certains) Mac, si tu as un clavier comme l'AZERTY qui peut tapper des accents mais pas des majuscules avec accents : | On Linux and (some) Mac, if you have a keyboard layout like the AZERTY that can type accent but no capital letters with accents: }} <kbd>Caps Lock</kbd> {{puis|then}} <kbd>é</kbd> {{puis|then}} <kbd>Caps Lock</kbd> {{te donne un | gives you a }} **É**, {{la touche est un *Caps Lock* (qui met toutes les lettres en majuscule) et non un *Shift Lock* (qui fait comme si <kbd>Shift</kbd> était enfoncée). Ce dernier comportement vient des Machines à écrire où la touche correspondait à un déplacement physique. Sur Windows, c'est le comportement Shift Lock. Voici [un clavier français de France](https://majusculesaccentuées.fr/) avec ce comportement. Sur Linux on peut bien sûr changer le comportement. | the key is a Caps Lock (put all letters in Capital Letter) and not a Shift Lock (act as if Shift was pressed). The latter behaviour is due to the typewritters when the key induced a physical move. On Windows, the Shift Lock behaviour is used. [Here is French from France keyboard layout](https://majusculesaccentuées.fr/) with the Caps Lock behaviour. Linux behaviour can of course be changed. }}
+- {{Sur Windows pour imiter le comportement Linux, si tu as un clavier comme l'AZERTY qui peut tapper des accents mais pas des majuscules avec accents :| On Windows to mimic Linux behaviour, if you have a keyboard layout like the AZERTY that can type accent but no capital letters with accents: }} {{télécharge|download}} [WinCompose](https://github.com/samhocevar/wincompose) {{et active l'option _Caps Lock_ met en majuscule les lettres accentuées|and activate the option _Caps Lock is used to produced accentuated uppercase letters_}}, {{ensuite tu peux faire <kbd>Shift Lock</kbd> puis <kbd>ç</kbd> et tu obtiendras <strong>Ç</strong> majuscule.|then you can press <kbd>Shift Lock</kbd> then <kbd>ç</kbd> and you will obtain a uppercase <strong>Ç</strong>.}}
 - {{Sur Windows (Microsoft Word seulement) tu peux avoir des accents via | On Windows (Microsoft Word only) support for accents via }} <kbd>Ctrl+'</kbd> {{puis|then}} <kbd>E</kbd>, {{ la cédille est | cedilla is }} <kbd>,</kbd>, Diaeresis/Tréma/Ümlaut {{est|is}} <kbd>"</kbd>. {{Si tu connais les <em>AltCode</em>, lis la note [ci-dessous](#from-u-plus)|If you know the <em>AltCode</em>, read the note [below](#from-u-plus).}}
 - {{Sur internet il existe des extensions|On the internet there exists}} [Firefox](https://addons.mozilla.org/en-US/firefox/addon/easyaccent/) {{et|and}} [Chrome](https://chrome.google.com/webstore/detail/fastaccent/gkadokkbkifbfpiljldcnnpkebpannhb) {{qui permettent de tapper facilement des accents en faisant par exemple|extensions that allow to write fastly accent by doing for example}} <kbd>Ctrl+'</kbd> {{puis|then}} **E** {{donne|giving}} **É**.
 - Je conseille également la lecture [ce petit article wikipedia](https://fr.wikipedia.org/wiki/Usage_des_majuscules_en_français#Accentuation_des_majuscules_et_des_capitales).
 
 ## <span id="type-characters">{{Comment tapper n'importe quel caractère unicode, y compris les accents ?|How to type any Unicode character, including accents?}}</span>
-{{Les meilleures méthodes sont au **dessus** de la liste :|Best methods at the **top** of the list:}}
+<!-- {{Les meilleures méthodes sont au **dessus** de la liste :|Best methods at the **top** of the list:}} -->
 
-- {{Sur|On}} Linux &amp; Mac, {{ton clavier a probablement plus de symboles. AltGr et AltGrShift sont utilisées pour tapper plus de caractères. Par exemple sur mon clavier <kbd>AltGr+I</kbd> = **→**. Tu peux également utiliser un clavier <em>étendu</em> avec les symboles que tu veux ou [créer toi même](https://www.microsoft.com/en-us/download/details.aspx?id=22339) une disposition de clavier.|your keyboard have probably more symbols. AltGr and AltGrShift are filled with a lot of characters. For example on my keyboard <kbd>AltGr+I</kbd> = **→**. You can also use an <em>extended</em> layout with the symbols you want or create your [own keyboard layout](https://www.microsoft.com/en-us/download/details.aspx?id=22339).}}
-- {{Sur|On}} Linux {{utilise la touche <kbd>Compose</kbd> !|use <kbd>Compose</kbd> key!}} {{Elle ne dépend pas du clavier virtuel, chez moi j'ai configuré que la touche <kbd>Pause</kbd> soit en fait la touche <kbd>Compose</kbd>. Ensuite par exemple je peux tapper <kbd>Compose</kbd> puis <kbd>'</kbd> puis <kbd>e</kbd> donne **é** ou <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> donne **«** ou <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> donne **≥** et bien plus encore sur | It does not depend on keyboard layout at all, I've mapped it to <kbd>Pause</kbd> because no app uses that. Go in system settings to choose where to map it. Then for example type <kbd>Compose</kbd> then <kbd>'</kbd> then <kbd>e</kbd> gives **é** or <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> gives **«** or <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> gives **≥** and a lot more on}} [Ubuntu Help](https://help.ubuntu.com/community/ComposeKey). {{Voici aussi|Here is also}} [{{une liste que j'ai trouvée|a list I found}}](https://www.x.org/releases/X11R7.7/doc/libX11/i18n/compose/en_US.UTF-8.html).
+- {{Sur|On}} Linux &amp; Mac, {{ton clavier a probablement plus de symboles. AltGr et AltGrShift sont utilisées pour tapper plus de caractères. Par exemple sur mon clavier <kbd>AltGr+I</kbd> = **→**. Tu peux également utiliser un clavier <em>étendu</em> avec les symboles que tu veux ou le créer **toi-même** une disposition de clavier en modifiant quelques fichiers.
+|your keyboard have probably more symbols. AltGr and AltGrShift are filled with a lot of characters. For example on my keyboard <kbd>AltGr+I</kbd> = **→**.
+You can also use an <em>extended</em> layout with the symbols you want or create your **own keyboard layout** by modifying some text files.
+}}
+- {{Sur|On}} Linux {{utilise la touche <kbd>Compose</kbd> !|use <kbd>Compose</kbd> key!}} {{Elle ne dépend pas du clavier virtuel, chez moi j'ai configuré dans les paramètres systèmes que la touche <kbd>Pause</kbd> soit en fait la touche <kbd>Compose</kbd>. Ensuite par exemple je peux tapper <kbd>Compose</kbd> puis <kbd>'</kbd> puis <kbd>e</kbd> donne **é** ou <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> donne **«** ou <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> donne **≥** et bien plus encore sur | It does not depend on keyboard layout at all, I've mapped it to <kbd>Pause</kbd> because no app uses that. Go in system settings to choose where to map it. Then for example type <kbd>Compose</kbd> then <kbd>'</kbd> then <kbd>e</kbd> gives **é** or <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> gives **«** or <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> gives **≥** and a lot more on}} [Ubuntu Help](https://help.ubuntu.com/community/ComposeKey). {{Voici aussi|Here is also}} [{{une liste que j'ai trouvée|a list I found}}](https://www.x.org/releases/X11R7.7/doc/libX11/i18n/compose/en_US.UTF-8.html).
+- {{Sur|On}} Windows {{télécharges|download}} [WinCompose](https://github.com/samhocevar/wincompose) {{utilise la touche <kbd>Compose</kbd> !|use <kbd>Compose</kbd> key!}} {{Elle ne dépend pas du clavier utilisé, chez moi j'ai configuré que la touche <kbd>Pause</kbd> soit en fait la touche <kbd>Compose</kbd>. Ensuite par exemple je peux tapper <kbd>Compose</kbd> puis <kbd>'</kbd> puis <kbd>e</kbd> donne **é** ou <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> donne **«** ou <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> donne **≥** et bien plus encore sur | It does not depend on keyboard layout at all, I've mapped it to <kbd>Pause</kbd> because no app uses that. Then for example type <kbd>Compose</kbd> then <kbd>'</kbd> then <kbd>e</kbd> gives **é** or <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> gives **«** or <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> gives **≥** and a lot more on}} [Ubuntu Help](https://help.ubuntu.com/community/ComposeKey). {{Voici aussi|Here is also}} [{{une liste que j'ai trouvée|a list I found}}](https://www.x.org/releases/X11R7.7/doc/libX11/i18n/compose/en_US.UTF-8.html).
+- {{Sous Windows il y a [ce logiciel officiel](https://www.microsoft.com/en-us/download/details.aspx?id=22339)
+pour créer toi-même une disposition de clavier, cependant l'installation du nouveau clavier est légèrement inhabituelle.
+Tu peux par exemple, faire que quand on fait <kbd>AltGr</kbd>+<kbd>w</kbd> ça fait le caractère **«** ?
+|On Windows there is [this official app](https://www.microsoft.com/en-us/download/details.aspx?id=22339).
+to create yourself a keyboard layout, However the installation of the new layout is a bit unusual.
+You can for example choose that <kbd>AltGr</kbd>+<kbd>w</kbd> produces the **«** character ?}}
 - {{Sur|On}} Android/iOS{{ |}}: {{appui long sur une touche va vous montrer d'autres symboles|long press on a key to get more symbols}}.
 - {{Sur|On}} Android/iOS{{ |}}: {{téléchargez un autre clavier avec les symboles que vous aimez|download a new keyboard with the symbols you like}}.
 - {{Sur|On}} Android/iOS{{ |}}: [{{utiliser le *Dictionnaire personnel* avec des raccourcis|use *Personal Dictionary* with shortcuts}}](https://www.facebook.com/robert.vanden.eynde/posts/10155540741173592).
@@ -258,14 +425,15 @@ Different currency symbols are useful: `$ € ¥ ¢ ¤ ₿ ₽ ฿ ₹`. List [o
 - {{Sur|On}} Latex, {{il y a probablement une séquence du style|there is probably a sequence like}} `\times` {{pour|for}} **×**.
 - {{En|In}} Html, {{il y a probablement une séquence du style|there is probably a sequence like}} `&times;` {{pour|for}} **×**. [{{Liste Wikipédia|Wikipedia List}}](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references).
 - {{Sur|On}} vim: `digraph`! {{C'est la même idée que la Compose Key|That's the same idea as the Compose Key}}.
-
-- {{Sur n'importe quelle plateform : tappez le nom sur Google et puis copiez-collez... ou utiliser la <em>table des caractères</em> présente dans l'OS mais utilisez-la en dernier recours car c'est tellement lent...|On Any platform: Google the name and copy paste... or go in the OS <em>Character Map</em> app but use this as a last resort because it is so slow.}}
+- {{Sur n'importe quelle plateforme : tappez le nom sur Google et puis copiez-collez... ou utiliser la <em>table des caractères</em> présente dans l'OS mais utilisez-la en dernier recours car c'est tellement lent...|On Any platform: Google the name and copy paste... or go in the OS <em>Character Map</em> app but use this as a last resort because it is so slow.}}
 
 ### <span id="from-u-plus">{{Si tu connais le point de code Unicode comme|If you know the Unicode codepoint like}} U+2205</span>
 {{Notez néamoins que retenir une liste de nombre est stupide donc préférez les autres méthodes de cette page...|Please notice that memorising a list of numbers is stupid so prefer another method on this page...}}
 
 - {{Sur Linux dans une app GTK+ :|On Linux GTK+ App:}} <kbd>Ctrl+Shift+U</kbd> <kbd>2</kbd> <kbd>2</kbd> <kbd>0</kbd> <kbd>5</kbd> <kbd>Enter</kbd>.
 - {{Sur|On}} Windows <kbd>Alt</kbd> {{et|and}} <kbd>+ {{sur le clavier numérique|on keypad}}</kbd> {{puis|then}} <kbd>2</kbd> <kbd>2</kbd> <kbd>0</kbd> <kbd>5</kbd> ({{sur le clavier numérique|on the keypad}}). {{Cependant tu as besoin d'activer une clef du registre Windows|requires Windows registery setting}}. [{{Méthode|Method}} 1](http://www.fileformat.info/tip/microsoft/enter_unicode.htm) [{{Méthode|Method}} 2](https://www.johndcook.com/blog/2008/08/17/three-ways-to-enter-unicode-characters-in-windows/). {{Il est possible d'entrer <em>certains</em> caractères sans changer le registre mais la méthode n'est pas universelle, plus d'info [ici](http://www.fileformat.info/tip/microsoft/enter_unicode.htm)|It's possible to enter <em>some</em> characters without modifying a registery key but the method is not universal, more info [here](http://www.fileformat.info/tip/microsoft/enter_unicode.htm)}}. {{Mais préférez une autre méthode car retenir des nombres c'est stupide...|But prefer other input method it's stupid to memorise the numbers...}}
+- {{Sur|On}} Windows {{sous|on}} Word: 00C5 Alt+C
+- {{Sous|On}} macOs: Alt + Maj + F {{ou|or}} Alt + 00C5
 - {{En|In}} HTML: `&#x2205;`
 - {{En|In}} code: `"\u2205"` (Java/Javascript/Python), `chr(0x2205)` (Python), `String.fromCharCode(0x2205)` (Javascript), `Character.toString((char)0x2205)` (Java).
 
@@ -282,22 +450,30 @@ Different currency symbols are useful: `$ € ¥ ¢ ¤ ₿ ₽ ฿ ₹`. List [o
 ## <span id="webapp-keyboard">{{Clavier virtuels sur le web|Virtual keyboards on the web}}</span>
 - {{Tapper rapidement des caractères en plein de langues|Fastly write characters in lots of languages}} — [Lexilogos](http://www.lexilogos.com/clavier/francais.htm) {{ou|or}} [Type It](http://typeit.org).
 
-## Unicode operations
-Python has built-in unicode support since version 3, in python 2 there were two types of strings, <em>normal strings</em> and <em>unicode strings</em>. Python also have <span style="white-space: nowrap;">`import unicodedata`</span> module for more advanced Unicode-related operation.
+## <span id="python">{{Opérations Unicode|Unicode operations}}</span>
+{{Python a un support built-in d'unicode depuis la version 3, en python 2 il y a avait deux typles de strings, les strings <em>normales</em> et les strings <em>unicode</em>. Python a également un module <span style="white-space: nowrap;">`import unicodedata`</span> pour des opérations plus complexes liées à l'Unicode.
+|Python has built-in unicode support since version 3, in python 2 there were two types of strings, <em>normal strings</em> and <em>unicode strings</em>. Python also have <span style="white-space: nowrap;">`import unicodedata`</span> module for more advanced Unicode-related operation.}}
 
-- Numeric ↔ Character, `chr(233) == chr(0xe9) == "é"`, `ord("é") == 233`
-- Uppercase, lowercase, `"é".upper() == "É"`, `"é".lower() == "é"`
-- Name query, `unicodedata.name("é") == 'LATIN SMALL LETTER E WITH ACUTE'`
-- Composition, decomposition, `unicodedata.normalize('NFC', "é") # U+00E9`, `unicodedata.normalize('NFD', "é") # U+0065 U+0301`
+- {{Conversion nombre ↔ caractère|Numeric ↔ Character Conversion}}{{ |}}: `chr(233) == chr(0xe9) == "é"`, `ord("é") == 233`
+- {{Caractère via le point de code dans une String|Character via code point in a string}}{{ :}}: `print("{{Les rayons \u03B3 sont dangereux !|The \u03B3-rays are dangerous!}}")`
+- {{Majuscule, minuscule|Uppercase, lowercase}}{{ |}}: `"été".upper() == "ÉTÉ"`, `"été".lower() == "été"`
+- {{Connaître le nom|Name query}}{{ |}}: `unicodedata.name("é") == 'LATIN SMALL LETTER E WITH ACUTE'`
+- {{Composition, décomposition|Composition, decomposition}}{{ |}}`unicodedata.normalize('NFC', "é") # U+00E9`, `unicodedata.normalize('NFD', "é") # U+0065 U+0301`
 
-Here are my recipes for fast operations in calculator style:
+{{En mode interactif dans ma calculette python, je peux par exemple faire `uniline("αβγ")` pour avoir une belle liste|In interactive mode in my python calculator, I can for example do `uniline("αβγ")` to have a nice list}}{{ |}}:
+
+    ["U+03B1 α GREEK SMALL LETTER ALPHA",
+     "U+03B2 β GREEK SMALL LETTER BETA",
+     "U+03B3 γ GREEK SMALL LETTER GAMMA"]
+
+{{Voici la définition de la fonction `uniline`, pour plus de fun, voir mon [fichier](https://github.com/robertvandeneynde/python/blob/master/uniutils.py)|Here is the definition of my function `uniline`, for more fun, see my [file](https://github.com/robertvandeneynde/python/blob/master/uniutils.py) called}} [`uniutils.py`](https://github.com/robertvandeneynde/python/blob/master/uniutils.py){{ |}}:
 
     import unicodedata
     
     def uniname(s):
         """ é → LATIN SMALL LETTER E WITH ACUTE """
         if len(s) == 1:
-            return unicodedata.name(s)
+            return unicodedata.name(s, '?')
         else:
             return [uniname(x) for x in s]
     
@@ -309,19 +485,11 @@ Here are my recipes for fast operations in calculator style:
             return [uord(x) for x in s]
     
     def uniline(s):
-        """ é → LATIN SMALL LETTER E WITH ACUTE é U+00E9 """
+        """ é → U+00E9 é LATIN SMALL LETTER E WITH ACUTE """
         if len(s) == 1:
             return uord(s) + ' ' + s + ' ' + uniname(s)
         else:
             return [uniline(x) for x in s]
-
-You can then use in the interactive shell `uniline("αβγ")` to have a nice list:
-
-    ["U+03B1 α GREEK SMALL LETTER ALPHA",
-     "U+03B2 β GREEK SMALL LETTER BETA",
-     "U+03B3 γ GREEK SMALL LETTER GAMMA"]
-    
-</em>
 
     {% endmarkdown %}
     </div>

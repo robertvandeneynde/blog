@@ -33,9 +33,12 @@ RE = re.compile(r'\{\% markdown \%}(.*?)\{\% endmarkdown \%\}', re.DOTALL)
 
 for filename in os.listdir('.'):
     if FR.match(filename):
-        with open(filename) as f:
-            content = f.read()
-            
-        with OutFile("{}.html".format(FR.match(filename).group(1))) as out:
-            out.write(RE.sub(lambda m:by_markdown(m.group(1)), content))
+        try:
+            with open(filename) as f:
+                content = f.read()
+                
+            with OutFile("{}.html".format(FR.match(filename).group(1))) as out:
+                out.write(RE.sub(lambda m:by_markdown(m.group(1)), content))
+        except Exception as e:
+            print("Error in {}: {}".format(filename, e))
 
