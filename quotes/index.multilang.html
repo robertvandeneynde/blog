@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="{{fr|en}}">
+    <!-- generated from .multilang.md.html -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>{{Citations|Quotes}} &mdash; Robert Vanden Eynde</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+        .side {
+            font-size: 75%;
+        }
+        /* blockquote::after {
+            content: "— Robert Vanden Eynde"; 
+        } */ /* can't do it in css because of the .permalink added by js */
+        .author {
+            color: #1166B9; /* 0091ff; */
+        }
+        img {
+              max-width: 100%;
+        }
+        .search-switcher label {
+            margin-right: 10px;
+        }
+        .search-switcher label > * {
+            vertical-align: middle;
+        }
+        .search-switcher label input[type=checkbox] {
+            margin-right: 3px;
+        }
+        .smallcaps {
+            font-variant: small-caps;
+        }
+        .permalink {
+            margin-left: 0.5em; /* changed from unicode css */
+            color: #0091ff; /* #1166B9; */
+        }
+        .lang-change {
+            margin-bottom: 10px;
+        }
+        [id]:not([id=wrapper]) {
+            transition: background linear 1s;
+        }
+        .selected {
+            background: #ffff66;
+        }
+        #wrapper {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+            box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+            background: white;
+        }
+        /*kbd {
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            margin: 0 0.2em;
+            box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+            background-color: #f7f7f7;
+        }*/
+        /*
+        kbd {
+            font-family: Menlo,Monaco,Consolas,'Courier New',monospace;
+            line-height: 1.57142857;
+            text-transform: capitalize;
+            border-width: 1px 1px 3px 1px;
+            border-style: solid;
+            border-color: #e0e0e0;
+            border-bottom-color: #dbdbdb;
+            border-radius: 5px;
+            background: #f0f0f0 url(http://media02.hongkiat.com/v4s/key_bg.png) repeat-x;
+            text-shadow: 1px 1px #fff;
+            padding: 2px 5px;
+            font-size: 14px;
+            font-size: 1.4rem;
+        }*/
+        body {
+            padding: 10px;
+        }
+        nav {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            display: inline-block !important;
+            background: rgba(250, 250, 250, .8); /* #fafafacc; hexadecimal with hex value https://stackoverflow.com/a/31029864/1980630 */ /* https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgba() */
+            margin: 5px;
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px;
+            border-left: 1px solid #ccc;
+            white-space: nowrap;
+        }
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+        <!-- <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" /> -->
+        <script>
+        // Polyfill Array.includes from https://tc39.github.io/ecma262/#sec-array.prototype.includes from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes#Polyfill
+        if(! Array.prototype.includes)
+            Object.defineProperty(Array.prototype,"includes",{value:function(r,e){if(null==this)throw new TypeError('"this" is null or not defined');var t=Object(this),n=t.length>>>0;if(0===n)return!1;var i,o,a=0|e,u=Math.max(0<=a?a:n-Math.abs(a),0);for(;u<n;){if((i=t[u])===(o=r)||"number"==typeof i&&"number"==typeof o&&isNaN(i)&&isNaN(o))return!0;u++}return!1}});
+        
+        document.addEventListener("DOMContentLoaded", function(){
+            // propose to switch window.location.search
+            const ALLOWED_BOOLEAN_QUERY = ['noauthor', 'nohashtag'];
+            ;(function(){
+                var A = window.location.search.substr(1).split('&')
+                A = (A.length == 1 && A[0] == '') ? [] : A
+                var target = document.getElementById('wrapper') || document.body
+                var x = document.createElement('p')
+                x.setAttribute('class', 'search-switcher')
+                target.appendChild(x);
+                ALLOWED_BOOLEAN_QUERY.forEach(function(n){
+                    var y = document.createElement('input')
+                    y.setAttribute('type', 'checkbox')
+                    
+                    if(A.includes(n))
+                        y.setAttribute('checked', 'checked')
+                    
+                    y.addEventListener('click', function(){
+                        var i = A.indexOf(n);
+                        if(i == -1) {
+                            A.push(n)
+                        } else {
+                            A.splice(i, 1);  // del A[i]
+                        }
+                        window.location.search = A.join('&')
+                    })
+                    
+                    x.appendChild(function(){
+                        var z = document.createElement('label')
+                        z.appendChild(y);
+                        z.appendChild(function(){
+                            var a = document.createElement('span')
+                            a.appendChild(document.createTextNode(n))
+                            return a
+                        }())
+                        return z
+                    }());
+                })
+            })();
+            
+            // add my name to all blockquote (unless ?noauthor)
+            ;(function(){
+                if(window.location.search.substr(1).split('&').includes('noauthor'))
+                    return
+                var T = document.querySelectorAll('blockquote')
+                for(var i = 0; i < T.length; i++) {
+                    var x = T[i]
+                    if(x.querySelector('.author'))
+                        continue // if it contains an author, it's not be me!
+                    var y = document.createElement('span')
+                    y.setAttribute('class', 'author')
+                    y.appendChild(document.createTextNode(' — Robert Vanden Eynde'))
+                    x.appendChild(y)
+                }
+            })();
+            
+            // Should be factored out with unicode/ (unless ?nohashtag)
+            ;(function(){
+                if(window.location.search.substr(1).split('&').includes('nohashtag'))
+                    return
+                var T = document.querySelectorAll('[id]')
+                for(var i = 0; i < T.length; i++) {
+                    var x = T[i]
+                    var id = x.getAttribute('id')
+                    if(id == 'wrapper')
+                        continue;
+                    
+                    var y = document.createElement('a') // '<a href="#{id}">#{id}</a>'.replace(/\{id\}/g, id)
+                    y.setAttribute('href', '#' + id)
+                    y.setAttribute('class', 'permalink')
+                    var t = document.createTextNode('#' + id)
+                    y.appendChild(t)
+                    
+                    // x.parentElement.insertBefore(y, x.nextSibling)
+                    x.appendChild(y)
+                }
+            })();
+            
+            // Should be factored out with unicode/
+            ;(function(){
+                if(document.location.hash && document.location.hash != '#') {
+                    var id = document.location.hash.slice(1)
+                    var e = document.getElementById(id)
+                    e.classList.add('selected')
+                    setTimeout(function(){
+                        e.classList.remove('selected')
+                    }, 5000)
+                }
+            })();
+            
+            // Should be factored out with unicode/
+            ;(function(){
+                var T = document.querySelectorAll('a[href^="#"]')
+                for(var i = 0; i < T.length; i++) {
+                    var x = T[i]
+                    x.addEventListener('click', function(){
+                        var e = document.getElementById(this.getAttribute('href').slice(1))
+                        e.classList.add('selected')
+                        setTimeout(function(){
+                            e.classList.remove('selected')
+                        }, 5000)
+                    })
+                }
+            })();
+        })
+        </script>
+        
+        <!-- <script src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
+        <!-- <script src="/parascolaire/utils.js"></script> -->
+        
+        <!-- <link id="stylesheet" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css"> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script> -->
+        <!-- <script>
+            $(function(){
+                // utils.dedentPreCode()
+                // hljs.initHighlightingOnLoad()
+            })
+        </script> -->
+
+    </head>
+    <body>
+    <div id="wrapper">
+    <h1>{{Citations|Quotes}} &mdash; Robert Vanden Eynde</h1>
+    <div class="lang-change"><img src="../flag-{{en|fr}}.png"/> <a href="index.{{en|fr}}.html" lang="{{en|fr}}" hreflang="{{en|fr}}">{{English here!|Français ici !}}</a></div>
+    
+    <p>{{ Je n'aime pas me répéter, donc j'écris des choses sur mon site, et parfois <strong>une seule phrase</strong> marque mieux l'esprit qu'un long récit !
+        | I don't like to repeat myself, so I write things on my site, and sometimes <strong>one sentence</strong> is more memorable than a long story! }}</p>
+
+    <p>{{ <!-- TODO: fr -->
+        <em>Triple click on the text</em> then <em>Ctrl+C</em> to copy, <em>Right click on the hashtag</em> then <em>Copy link</em> to share. }}</p>
+
+    <blockquote id="no-mouse">
+        {{ Sérieusement, qui a besoin d'une souris pour éditer du texte ?
+        | Seriously, who needs a mouse when editing text? }}
+    </blockquote>
+    
+    <blockquote id="no-pad">
+        {{ La souris, c'est lent... Mais le pad ? C'est pire !
+         | The mouse, that's slow... But trackpad? That's wooorse! }}
+    </blockquote>
+    
+    <blockquote id="I-know-nothing">
+        {{ La seule chose que je sais, c'est que je ne sais rien
+         | The only thing I know is that I know nothing }}
+        <span class="author">&mdash; {{Socrate|Socrates}}</span>
+    </blockquote>
+    
+    <blockquote id="functionalities">
+        {{ Ne vous attachez pas aux programmes, attachez vous aux fonctionnalités (et débrouillez vous pour trouver un ou des programmes qui font ce que vous voulez, et non l'inverse!)
+         | Don't love the programs, love the functionalities (and find the programs that have what you want, not the other way around!) }}
+    </blockquote>
+    
+    <blockquote id="directly">
+        « Directement »
+        « Simplement »
+        « Intuitivement »
+        Il faut « Juste »
+        « Il suffit »...
+        c'est subjectif !
+        « Directement » pour moi ce n'est pas « Directement » pour toi.
+        Essaie d'enlever le mot de la phrase pour voir ?
+        Oh mince, la phrase est plus courte et plus utile !
+    </blockquote>
+    
+    <blockquote id="what-you-dont-know">
+        {{ Mon but, c'est de vous apprendre ce que vous ne connaissez <strong>pas</strong>
+         | My goal is to teach what you <strong>don't</strong> know }}
+    </blockquote>
+    
+    <blockquote id="teaching-is-repeating">
+        {{ Enseigner, c'est répéter
+         | Teaching is repeating }}
+         <span class="author">{{Probablement pas moi|Probably not me}}</span>
+    </blockquote>
+    
+    <blockquote id="standards">
+        Parfois on peut choisir l'un ou l'autre sans
+        que l'un soit meilleur que l'autre,
+        mais c'est plus pratique si tout le monde choisit la même chose.
+
+        <span class="side">
+            Les <strong>standards</strong>
+            aident (comme le Français standard,
+            les formats de date, 
+            ou l'HTML...).
+        </span>
+        
+    </blockquote>
+    
+    <blockquote id="orthogonality">
+        {{Orthogonalité|Orthogonality}},
+        {{comment tout faire en ne connaissant rien (ou très peu)
+         |how to do everything with nothing (or a little)}}
+    </blockquote>
+    
+    <blockquote id="dark-theme">
+        {{ Codez sur fond foncé, sinon c'est comme regarder une ampoule droit dans les yeux (ce n'est pas agréable)
+         | Code on dark theme, otherwise it's like looking at a lightbulb into the eyes (that's painful) }}
+        
+        <span class="side">
+        {{ Sauf la journée en plein soleil, le fond clair est plus lisible dans ce cas.
+         | Except during the day when the sun is shining hard, in that case the light theme is more readable. }}
+        </span>
+        
+        <span class="author">{{Pas moi|Not me}}</span>
+    </blockquote>
+    
+    <blockquote id="gui-discoverability">
+        {{
+            <a href="https://lmgtfy.com?s=d&q=Graphical+User+Interface">GUI</a>'s
+            are useful for <strong>discoverability</strong> but 
+            <a href="https://lmgtfy.com?s=d&q=Command+Line+Interface">CLI</a>
+            have <code>--help</code> and <code>man</code>
+        }} <!-- TODO: fr -->
+        
+        <!-- <span class="side"></span> -->
+        <!-- <span class="author"> -->
+    </blockquote>
+    
+    <blockquote id="written-language">
+        {{ Il y a trois types de langage,
+        le langage écrit (gravé dans la pierre, fait pour durer)
+        le langage parlé (fait pour communiquer rapidement à l'oral)
+        et le langage de <em>chat</em> (fait pour communiquer rapidement avec un clavier et donc minimiser le nombre de caractères).
+
+        En informatique il y a les scripts et la ligne de commande.
+        }} <!-- TODO: en -->
+    </blockquote>
+
+    <blockquote>
+        {{ Things change, deal with it... But change is annoying. }}
+        <!-- TODO: fr -->
+    </blockquote>
+    
+    <!-- blockquote MUST be closed to avoid nesting -->
+    <!-- <blockquote id="{english_id}">
+        {{ {french_text}
+         | {english_text} }}
+        
+        <span class="side"></span>
+        <span class="author">AuthorIfNotRobert Else DeleteLine</span>
+    </blockquote> -->
+    
+</div></body></html> <!-- end of file friendly (only one line) to be quickly editable via `vim + file.txt` -->

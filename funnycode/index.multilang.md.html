@@ -86,17 +86,22 @@
     <div id="wrapper">
     {% markdown %}
     
-# {{Codes Funny|Funny codes}}
-<div class="lang-change"><a href="index.{{en|fr}}.html" lang="{{en|fr}}" hreflang="{{en|fr}}">{{English here!|Français ici !}}</a></div>
+# Funny codes
+<p class="lang-switch"><a href="turtle.{{en|fr}}.html" lang="{{en|fr}}" hreflang="{{en|fr}}"><img style="vertical-align:middle; margin-right: 5px;" src="../flag-{{en|fr}}.png"/>{{English here!|Français ici !}}</a>
 
-Python Counter
+## Python Counter
 
 <pre><code class="py">
-    from collections import Counter
-    Counter([1,2,3,1,0,2,1,0]) # {0:2, 1:3, 2:2, 3:1}
+    >>> set([1, 2, 4, 1, 0, 2, 1, 0])
+    {0, 1, 2, 4}
+    >>> from collections import Counter
+    >>> Counter([1, 2, 4, 1, 0, 2, 1, 0])
+    {0:2, 1:3, 2:2, 4:1}
 </code></pre>
 
-Bash aliases
+More in the [offical doc](https://docs.python.org/3/library/collections.html#collections.Counter).
+
+## Bash aliases
 
 <pre><code class="bash">
     alias last-download='ls -d /home/robert/downloads/* --sort=time | head -n 1'
@@ -105,13 +110,9 @@ Bash aliases
     alias copy-last-screenshot='cp --verbose "$(last-screenshot)" .'
 </code></pre>
 
-    alias copy-last-screenshot='cp --verbose "$(last-screenshot)" .'
-</code></pre>
+See more [in my bash_aliases](https://github.com/robertvandeneynde/bash) !
 
-    alias copy-last-screenshot='cp --verbose "$(last-screenshot)" .'
-</code></pre>
-
-{{Avoir un dossier <code>test</code>|Have a <code>test</code> directory}}
+## {{Avoir un dossier <code>test</code>|Have a <code>test</code> directory}}
 
 <pre><code class="bash">
     $ cd test
@@ -138,3 +139,43 @@ cd "$d"
 </code></pre>
 
 <p>Le <code>LC_ALL=en</code> est pour forcer que le jour soit en anglais, mais vous pouvez mettre fr aussi.
+
+## Python bridge in bash
+
+Quand tu as une variable en bash et que tu veux la transformer en un tout petit code python.
+
+<pre><code class="bash">
+VAR=Hello
+VAR=$(python3 -c '  # in bash, it is easy to go next line
+import sys          # sys.argv[0] est le nom du programme, ensuite on a les paramètres donnés
+var = sys.argv[1]   # {{en python, les noms de variables sont en minuscules|in python, variables are lowercase}}
+print(var.lower())  # {{code python arbitraire qui print le résultat|arbitrary python code printing result}}
+' "$VAR")  # {{on donne un seul paramètre, attention aux guillemets !|one parameter is passed, don't forget the quotes!}}
+</code></pre>
+
+{{On peut envoyer plusieurs paramètres et les récupérer via|One can send multiple parameters and read them using}} <code>sys.argv[1:]</code>
+
+<pre><code class="bash">
+VAR=Hello
+PARAM=World
+VAR=$(python3 -c '
+import sys
+var, param = sys.argv[1:]  # using list slicing argv[1:] syntax
+print(var + " " + param)   # must use double quotes for strings
+' "$VAR" "$PARAM")
+</code></pre>
+
+Plus tard, si le traitement devient intéressant, on peut créer un fichier python dans le path et l'appeler simplement comme ceci :
+
+<pre><code class="bash">
+VAR=$(python3 -m funny_transformation "$VAR" "$PARAM")
+</code></pre>
+
+Ou s'il est dans le path bash et qu'il commence par un `#!` comme `#!/usr/bin/env/python3` :
+
+<pre><code class="bash">
+VAR=$(funny_transformation.py "$VAR" "$PARAM")
+</code></pre>
+
+{% endmarkdown %}
+</div></body>

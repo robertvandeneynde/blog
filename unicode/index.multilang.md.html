@@ -61,6 +61,19 @@
         body {
             padding: 10px;
         }
+        nav {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            display: inline-block !important;
+            background: rgba(250, 250, 250, .8); /* #fafafacc; hexadecimal with hex value https://stackoverflow.com/a/31029864/1980630 */ /* https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgba() */
+            margin: 5px;
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px;
+            border-left: 1px solid #ccc;
+            white-space: nowrap;
+        }
         </style>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
         <!-- <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" /> -->
@@ -146,14 +159,17 @@
 </span></span>
 
 <span id="table"><span id="u-plus">
-{{Quand on parle d'un point de code Unicode comme 945, tout le monde aime utiliser la notation standard *U+xxxx* où *xxxx* est le code en [hexadécimal](https://fr.wikipedia.org/wiki/Hexadécimal).
-| When one talks about a unicode code point like 945, everyone likes to write the standard *U+xxxx* notation where *xxxx* is the code in [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal).}}
+{{Quand on parle d'un point de code Unicode comme 945, tout le monde aime utiliser la notation standard
+    *U+xxxx* où *xxxx* est le code en [hexadécimal](https://fr.wikipedia.org/wiki/Hexadécimal).
+| When one talks about a unicode code point like 945, everyone likes to write the standard
+    *U+xxxx* notation where *xxxx* is the code in [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal).}}
 {{La lettre `é` est donc appelée U+00E9 car E9 est l'hexadécimal de 233 en décimal.
-| The letter `é` is then called U+00E9 because E9 in hexadecimal is 233 in decimal.}}
+    | The letter `é` is then called U+00E9 because E9 in hexadecimal is 233 in decimal.}}
 {{Des tables|Tables}} [{{existent|exist}}](https://en.wikibooks.org/wiki/Unicode/Character_reference/0000-0FFF)
 {{avec la liste de tous les caractères|with the list of all characters}}.
-Unicode donne aussi un nom unique en anglais n'utilisant que les caractères A-Z et
-les tirets comme <em class="smallcaps">LATIN SMALL LETTER E WITH ACUTE</em> pour <em>é</em>.
+{{Unicode donne aussi un nom unique en anglais n'utilisant que les caractères A-Z et les tirets comme 
+    | Unicode also gives a unique name using only A-Z characters and the dash like}}
+<em class="smallcaps">LATIN SMALL LETTER E WITH ACUTE</em> {{pour|for}} <em>é</em>.
 </span></span>
 
 <span id="encoding"><span id="utf-8">
@@ -168,7 +184,7 @@ les tirets comme <em class="smallcaps">LATIN SMALL LETTER E WITH ACUTE</em> pour
 </span></span>
 
 {{Unicode est bien plus complexe que juste décider d'un nombre pour chaque caractère, il parle aussi des
-|Unicode is much more complex than just choosing number for each character, it features}}
+| Unicode is much more complex than just choosing number for each character, it features}}
 bidirectional characters, combining characters, CJK (*C*{{hinois|hinese}}, *J*{{aponais|apanese}}, *K*{{oréen|orean}}) characters,
 **emoji**, normalization,
 {{et plein d'autres|and much more}}.
@@ -185,7 +201,20 @@ bidirectional characters, combining characters, CJK (*C*{{hinois|hinese}}, *J*{{
 </span>
 
 <nav>
-
+    <a href="#stuff-in-math">{{Trucs de math|Stuff in math}}</a>
+    <a href="#languages">{{Beaucoup de langues|Lots of languages}}</a>
+    <a href="#typography">{{Typographie|Typography}}</a>
+</nav>
+<nav>
+    <a href="#type-accents">{{Comment tapper des accents ?|How to type accents?}}</a>
+    <a href="#type-characters">{{Comment tapper n'importe quel caractère ?|How to type any character?}}</a>
+</nav>
+<nav>
+    <a href="#french-keyboard">{{Différents claviers français|DifferentFrench keyboards}}</a>
+    <a href="#webapp-keyboard">{{Clavier virtuels|Virtual keyboards}}</a>
+</nav>
+<nav>
+    <a href="#python">{{Opérations Unicode|Unicode Operations}}</a>
 </nav>
 
 ## <span id="stuff-in-math">{{Trucs de math|Stuff in math}}</span>
@@ -231,23 +260,23 @@ bidirectional characters, combining characters, CJK (*C*{{hinois|hinese}}, *J*{{
 
 - <span id="leq"><span id="geq"><span id="ne">≥ = ≠ **{{PAS|NOT}}** >= == != /= &mdash;
     {{Évidement, en code, on se devra d'utiliser les bons caractères.
-    Cependant si vous ne savez vraiment pas entrer de caractère unicode (ce qui ne devrait pas arriver vu que vous lisez cet article),
-    préférez `!=` à `/=` car en programmation `/=` a une autre signification liée à la division
+        Cependant si vous ne savez vraiment pas entrer de caractère unicode (ce qui ne devrait pas arriver vu que vous lisez cet article),
+        préférez `!=` à `/=` car en programmation `/=` a une autre signification liée à la division
     | Of course, when writing code, one must use the correct characters.
-    However when you can't input unicode character
-    (which would almost never happen because you read this article),
-    consider using `!=` over `/=` because the `/=` has a different meaning in programming.}}
+        However when you can't input unicode character
+        (which would almost never happen because you read this article),
+        consider using `!=` over `/=` because the `/=` has a different meaning in programming.}}
 </span></span></span>
 
 - <span id="divide">1/2 1÷2 **{{PAS|NOT}}** 1:2 1⁄2 1∕2 —
     {{Voir|See}} [wikipedia division](https://en.wikipedia.org/wiki/Division_%28mathematics%29)
     {{où ISO 80000-2-9.6 dit que **÷** ne devrait pas être utilisé,
-    les deux derniers sont le _fraction slash_ et le _division slash_ mais ils n'apparaissent pas bien dans tous les browsers
-    donc utilisez plutot le simple **/** ou les caractères de fraction ci-dessous.
-    Quant à 1:2 cette convention n'est pas internationale et risque d'être confondue avec autre chose par des américains par exemple
+        les deux derniers sont le _fraction slash_ et le _division slash_ mais ils n'apparaissent pas bien dans tous les browsers
+        donc utilisez plutot le simple **/** ou les caractères de fraction ci-dessous.
+        Quant à 1:2 cette convention n'est pas internationale et risque d'être confondue avec autre chose par des américains par exemple
     |where ISO 80000-2-9.6 states **÷** should not be used, the latter two are the _fraction slash_ and the _division slash_ but they
-    do not appear as they should on all browsers, use simple **/** or the fraction characters below.
-    The 1:2 notation is not international and americans for instance could misinterpret it}}.
+        do not appear as they should on all browsers, use simple **/** or the fraction characters below.
+        The 1:2 notation is not international and americans for instance could misinterpret it}}.
 </span>
 
 - <span id="fraction">½ ¼ ⅓
@@ -258,9 +287,9 @@ bidirectional characters, combining characters, CJK (*C*{{hinois|hinese}}, *J*{{
 
 - <span id="vector">Vector: LaTeX `\vec{x}` U+20D7 x⃗ <span class="smallcaps">COMBINING RIGHT ARROW ABOVE</span>.
     {{C'est un caractère de [combinaison](https://en.wikipedia.org/wiki/Combining_character),
-    il doit être placé après le caractère qu'il veut décorer.
+        il doit être placé après le caractère qu'il veut décorer.
     |It's a [combining character](https://en.wikipedia.org/wiki/Combining_character),
-    it must be placed after the character that will be decorated.}}
+        it must be placed after the character that will be decorated.}}
 </span>
 
 - <span id="arrows"><span id="larr"><span id="rarr"><span id="uarr"><span id="darr">{{Flèches :|Arrows:}} ←↓→↑↙↘↖↗↔⇔↦ —
@@ -292,10 +321,11 @@ bidirectional characters, combining characters, CJK (*C*{{hinois|hinese}}, *J*{{
 
 - <span id="greek">
     {{Grec ? Change ton clavier en grec ! Et apprends le raccourci pour vite le changer, sur Windows, <kbd>Windows+Space</kbd>,
-    sur Mac <kbd>Command+Space</kbd> ou <kbd>Alt+Space</kbd> ou aller dans les paramètres système pour changer le raccourci,
-    sur Linux allez dans les paramètres systèmes pour choisir.|Greek? Change your keyboard layout to Greek! And know the shortcut to quickly change it,
-    on Windows <kbd>Windows+Space</kbd>, on Mac <kbd>Command+Space</kbd> or <kbd>Alt+Space</kbd> or goto control panel to change shortcut,
-    on Linux goto control panel to choose.}}
+        sur Mac <kbd>Command+Space</kbd> ou <kbd>Alt+Space</kbd> ou aller dans les paramètres système pour changer le raccourci,
+        sur Linux allez dans les paramètres systèmes pour choisir.
+    | Greek? Change your keyboard layout to Greek! And know the shortcut to quickly change it,
+        on Windows <kbd>Windows+Space</kbd>, on Mac <kbd>Command+Space</kbd> or <kbd>Alt+Space</kbd> or goto control panel to change shortcut,
+        on Linux goto control panel to choose.}}
 </span>
 
 - <span id="leqslant"><span id="geqslant">
@@ -369,19 +399,42 @@ Different currency symbols are useful: `$ € ¥ ¢ ¤ ₿ ₽ ฿ ₹`. List [o
 - <span id="nbsp">
     {{L'espace insécable ou en anglais <em>non-breaking space</em>|The non breaking space}}
     (nbsp) (U+00A0) (html `&nbsp;`).
-    {{Cette espace spéciale (nom [féminin](https://www.druide.com/fr/enquetes/un-espace-ou-une-espace)) ne peut pas être cassée pour passer à la ligne, mettre un nbsp avant un **?** par exemple empêcherait une ligne de commencer par **?**.
+    {{Cette espace spéciale (oui [on dit un<strong>e</strong>](https://www.druide.com/fr/enquetes/un-espace-ou-une-espace) espace) ne peut pas être cassée pour passer à la ligne, mettre un nbsp avant un **?** par exemple empêcherait une ligne de commencer par **?**.
     | This special space can not be split in two to do a line break, to put a non breaking space before a **?** is useful to have a space but being impossible for a line to begin with **?**.}}
     {{ Elle doit être mise avant|It must be written before}}
     **:** **;** **?** **!**
-    {{et au milieu des|and between the}}
+    {{et au milieu des guillemets|and between the french _guillemets_}}
     **«»**
     ({{c'est une convention française de France, en anglais ou en québéquois, on ne met pas d'espace|That's a french from France convention, in English and French from Canada one does not put a space}}).
     {{Latex et word sont au courant, rien à faire à ce niveau là|Latex and Word know, nothing to do there}}.
-    In CSS, for presentation purpose, one can also use `white-space: nowrap`.</span>
+    In CSS, for presentation purpose, one can also use `white-space: nowrap`.
+</span>
 
-- <span id="guillemet"><span id="quote">{{Guillemet français vs guillemets anglais vs guillemets droits|French guillemet vs English quotes vs straight quotes}} **« **{{mot|word}}** »** **“**{{mot|word}}**”** **"**{{mot|word}}**"**. {{Toutes les variations seront comprises.|All variations will be understood.}} [Wikipedia Quotation Mark](https://en.wikipedia.org/wiki/Quotation_mark).</span></span>
+- <span id="guillemet"><span id="quote">
+    {{Guillemet français vs guillemets anglais vs guillemets droits
+    | French guillemet vs English quotes vs straight quotes}}
+    **« **{{mot|word}}** »** **“**{{mot|word}}**”** **"**{{mot|word}}**"**.
+    {{Toutes les variations seront comprises.
+    | All variations will be understood.}}
+    [Wikipedia Quotation Mark](https://en.wikipedia.org/wiki/Quotation_mark).
+</span></span>
 
-- <span id="mdash"><span id="ndash"><span id="dash">{{Le tiret (*dash* en anglais)|The dash}} **-**, {{le|the}} En-dash **–** {{et le|and the}} Em-dash **—** {{sont des tirets de longeurs différentes|are different length of dashes}}. {{En français le En-dash est appelé *tiret moyen* et le Em-dash est appelé *tiret long* ou *tiret cadratin*.|}} {{J'aime utiliser le En-dash pour les intervalles comme (vivant 1850–1920)|I like using the En-dash for spans (lived 1850–1920)}}. {{Les Em-dash sont utilisés dans les livres pour les [dialogues](https://en.wikipedia.org/wiki/Quotation_mark#Quotation_dash)|Em-dash are used in books in [dialogues](https://en.wikipedia.org/wiki/Quotation_mark#Quotation_dash).}}. [Wikipedia about Dash](https://en.wikipedia.org/wiki/Dash), [Wikipedia sur le Tiret](https://fr.wikipedia.org/wiki/Tiret). {{Ne pas confondre avec le|Do not mix up with the}} [{{signe moins|minus sign}}](#minus).</span></span></span>
+- <span id="mdash"><span id="ndash"><span id="dash">
+    {{Le tiret (*dash* en anglais)|The dash}} **-**,
+    {{le|the}} En-dash **–** {{et le|and the}} Em-dash **—**
+    {{sont des tirets de longeurs différentes|are different length of dashes}}.
+    {{En français le En-dash est appelé *tiret moyen* et le Em-dash est appelé *tiret long* ou *tiret cadratin*.|}}
+    {{J'aime utiliser le En-dash pour les intervalles comme (vivant 1850–1920)|I like using the En-dash for spans (lived 1850–1920)}}.
+    {{Les Em-dash sont utilisés dans les livres pour les [dialogues](https://en.wikipedia.org/wiki/Quotation_mark#Quotation_dash)
+    | Em-dash are used in books in [dialogues](https://en.wikipedia.org/wiki/Quotation_mark#Quotation_dash).}}.
+    [Wikipedia about Dash](https://en.wikipedia.org/wiki/Dash), [Wikipedia sur le Tiret](https://fr.wikipedia.org/wiki/Tiret).
+    {{Ne pas confondre avec le|Do not mix up with the}}
+    [{{signe moins|minus sign}}](#minus)
+    {{ bien que je préfère clairement une soustraction comme "5&ndash;2" écrite avec un _En-dash_ plutôt qu'une soustraction comme "5-2" écrite avec un tiret.
+        La largeur d'un En dash étant souvent la même que celle du signe moins (En-dash 5&ndash;2 vs 5&minus;2 signe moins).
+    | even if I clearly prefer to see a substraction like "5&ndash;2" written with a En-dash rater than a substraction like "5-2" written with a dash.
+        The width of the En-dash character being often the same as the one of the minus sign (En-dash 5&ndash;2 vs 5&minus;2 minus sign). }}
+</span></span></span>
 
 - Mettre du texte en majuscule pour attirer l'attention, par exemple sur une vidéo youtube, est une pratique je déplore.
 
@@ -410,14 +463,14 @@ Different currency symbols are useful: `$ € ¥ ¢ ¤ ₿ ₽ ฿ ₹`. List [o
 |your keyboard have probably more symbols. AltGr and AltGrShift are filled with a lot of characters. For example on my keyboard <kbd>AltGr+I</kbd> = **→**.
 You can also use an <em>extended</em> layout with the symbols you want or create your **own keyboard layout** by modifying some text files.
 }}
-- {{Sur|On}} Linux {{utilise la touche <kbd>Compose</kbd> !|use <kbd>Compose</kbd> key!}} {{Elle ne dépend pas du clavier virtuel, chez moi j'ai configuré dans les paramètres systèmes que la touche <kbd>Pause</kbd> soit en fait la touche <kbd>Compose</kbd>. Ensuite par exemple je peux tapper <kbd>Compose</kbd> puis <kbd>'</kbd> puis <kbd>e</kbd> donne **é** ou <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> donne **«** ou <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> donne **≥** et bien plus encore sur | It does not depend on keyboard layout at all, I've mapped it to <kbd>Pause</kbd> because no app uses that. Go in system settings to choose where to map it. Then for example type <kbd>Compose</kbd> then <kbd>'</kbd> then <kbd>e</kbd> gives **é** or <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> gives **«** or <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> gives **≥** and a lot more on}} [Ubuntu Help](https://help.ubuntu.com/community/ComposeKey). {{Voici aussi|Here is also}} [{{une liste que j'ai trouvée|a list I found}}](https://www.x.org/releases/X11R7.7/doc/libX11/i18n/compose/en_US.UTF-8.html).
-- {{Sur|On}} Windows {{télécharges|download}} [WinCompose](https://github.com/samhocevar/wincompose) {{utilise la touche <kbd>Compose</kbd> !|use <kbd>Compose</kbd> key!}} {{Elle ne dépend pas du clavier utilisé, chez moi j'ai configuré que la touche <kbd>Pause</kbd> soit en fait la touche <kbd>Compose</kbd>. Ensuite par exemple je peux tapper <kbd>Compose</kbd> puis <kbd>'</kbd> puis <kbd>e</kbd> donne **é** ou <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> donne **«** ou <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> donne **≥** et bien plus encore sur | It does not depend on keyboard layout at all, I've mapped it to <kbd>Pause</kbd> because no app uses that. Then for example type <kbd>Compose</kbd> then <kbd>'</kbd> then <kbd>e</kbd> gives **é** or <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> gives **«** or <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> gives **≥** and a lot more on}} [Ubuntu Help](https://help.ubuntu.com/community/ComposeKey). {{Voici aussi|Here is also}} [{{une liste que j'ai trouvée|a list I found}}](https://www.x.org/releases/X11R7.7/doc/libX11/i18n/compose/en_US.UTF-8.html).
+- {{Sur|On}} Linux {{utilise la touche <kbd>Compose</kbd> !|use <kbd>Compose</kbd> key!}} {{Elle ne dépend pas du clavier virtuel, chez moi j'ai configuré dans les paramètres systèmes que la touche <kbd>Pause</kbd> soit en fait la touche <kbd>Compose</kbd>. Ensuite par exemple je peux tapper <kbd>Compose</kbd> puis <kbd>'</kbd> puis <kbd>e</kbd> donne **é** ou <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> donne "**«**" ou <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> donne **≥** et bien plus encore sur | It does not depend on keyboard layout at all, I've mapped it to <kbd>Pause</kbd> because no app uses that. Go in system settings to choose where to map it. Then for example type <kbd>Compose</kbd> then <kbd>'</kbd> then <kbd>e</kbd> gives **é** or <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> gives "**«**" or <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> gives **≥** and a lot more on}} [Ubuntu Help](https://help.ubuntu.com/community/ComposeKey). {{Voici aussi|Here is also}} [{{une liste que j'ai trouvée|a list I found}}](https://www.x.org/releases/X11R7.7/doc/libX11/i18n/compose/en_US.UTF-8.html).
+- {{Sur|On}} Windows {{télécharge|download}} [WinCompose](https://github.com/samhocevar/wincompose) {{et utilise la touche <kbd>Compose</kbd> !|and use <kbd>Compose</kbd> key!}} {{Elle ne dépend pas du clavier utilisé, chez moi j'ai configuré que la touche <kbd>Pause</kbd> soit en fait la touche <kbd>Compose</kbd>. Ensuite par exemple je peux tapper <kbd>Compose</kbd> puis <kbd>'</kbd> puis <kbd>e</kbd> donne **é** ou <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> donne "**«**" ou <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> donne **≥** et bien plus encore sur | It does not depend on keyboard layout at all, I've mapped it to <kbd>Pause</kbd> because no app uses that. Then for example type <kbd>Compose</kbd> then <kbd>'</kbd> then <kbd>e</kbd> gives **é** or <kbd>Compose</kbd> <kbd>&lt;</kbd> <kbd>&lt;</kbd> gives "**«**" or <kbd>Compose</kbd> <kbd>></kbd> <kbd>=</kbd> gives **≥** and a lot more on}} [Ubuntu Help](https://help.ubuntu.com/community/ComposeKey). {{Voici aussi|Here is also}} [{{une liste que j'ai trouvée|a list I found}}](https://www.x.org/releases/X11R7.7/doc/libX11/i18n/compose/en_US.UTF-8.html).
 - {{Sous Windows il y a [ce logiciel officiel](https://www.microsoft.com/en-us/download/details.aspx?id=22339)
 pour créer toi-même une disposition de clavier, cependant l'installation du nouveau clavier est légèrement inhabituelle.
-Tu peux par exemple, faire que quand on fait <kbd>AltGr</kbd>+<kbd>w</kbd> ça fait le caractère **«** ?
+Tu peux par exemple, faire que quand on fait <kbd>AltGr</kbd>+<kbd>w</kbd> ça fait le caractère "**«**" ?
 |On Windows there is [this official app](https://www.microsoft.com/en-us/download/details.aspx?id=22339).
 to create yourself a keyboard layout, However the installation of the new layout is a bit unusual.
-You can for example choose that <kbd>AltGr</kbd>+<kbd>w</kbd> produces the **«** character ?}}
+You can for example choose that <kbd>AltGr</kbd>+<kbd>w</kbd> produces the "**«**" character ?}}
 - {{Sur|On}} Android/iOS{{ |}}: {{appui long sur une touche va vous montrer d'autres symboles|long press on a key to get more symbols}}.
 - {{Sur|On}} Android/iOS{{ |}}: {{téléchargez un autre clavier avec les symboles que vous aimez|download a new keyboard with the symbols you like}}.
 - {{Sur|On}} Android/iOS{{ |}}: [{{utiliser le *Dictionnaire personnel* avec des raccourcis|use *Personal Dictionary* with shortcuts}}](https://www.facebook.com/robert.vanden.eynde/posts/10155540741173592).
@@ -444,7 +497,7 @@ You can for example choose that <kbd>AltGr</kbd>+<kbd>w</kbd> produces the **«*
 ## <span id="french-keyboard">{{Notes sur les claviers français|Notes on French keyboards}}</span>
 - {{Sur un clavier français de France sur Windows, il est impossible d'écrire des accents aigus sur toutes les lettres (typiquement les majuscules ou les caractères non français comme le <em>í</em>), changez au clavier belge ou utilisez une autre méthode expliquée dans cette liste.|On French from France Windows keyboard, no way to input Acute accents directly from keyboard (on capital letters or non french letters like <em>í</em>), change to Belgian or use other methods in that list.}}
 - {{Sur le clavier belge, il y a une touche morte Accent aigu **et** accent grave sur|On Belgian Keyboard there is a dead key for Acute accent **and** Grave accent on}} <kbd>AltGr+ù</kbd> {{et|and}} <kbd>AltGr+µ</kbd>.
-- {{Aucun de ces claviers permet le|None of those keyboards gives you}} **Ç** {{ou les guillemets|or the guillemets}} **«»** {{ou [l'espace insécable](#nbsp)|or the [non breaking space](#nbsp)}}.
+- {{Aucun de ces claviers permet le|None of those keyboards gives you}} **Ç** {{ou les guillemets|or the guillemets}} "**«»**" {{ou [l'espace insécable](#nbsp)|or the [non breaking space](#nbsp)}}.
 - {{Le [clavier BÉPO](https://en.wikipedia.org/wiki/Keyboard_layout#B%C3%89PO) est un bon clavier ergonomique pour tapper en français mais il est très différent de QWERTY ou AZERTY. Cependant il a beacuoup de caractères utiles à la typographie française comme **« » É Ç** et [l'espace insécable](#nbsp).|The [BÉPO keyboard](https://en.wikipedia.org/wiki/Keyboard_layout#B%C3%89PO) is a good ergonomic keyboard to write in French but is very different from QWERTY and AZERTY. However, it contains a lot of characters used in French typography like **« » É Ç** and [the non breaking space](#nbsp)}}
 
 ## <span id="webapp-keyboard">{{Clavier virtuels sur le web|Virtual keyboards on the web}}</span>
@@ -466,7 +519,9 @@ You can for example choose that <kbd>AltGr</kbd>+<kbd>w</kbd> produces the **«*
      "U+03B2 β GREEK SMALL LETTER BETA",
      "U+03B3 γ GREEK SMALL LETTER GAMMA"]
 
-{{Voici la définition de la fonction `uniline`, pour plus de fun, voir mon [fichier](https://github.com/robertvandeneynde/python/blob/master/uniutils.py)|Here is the definition of my function `uniline`, for more fun, see my [file](https://github.com/robertvandeneynde/python/blob/master/uniutils.py) called}} [`uniutils.py`](https://github.com/robertvandeneynde/python/blob/master/uniutils.py){{ |}}:
+{{Voici la définition de la fonction `uniline`, pour plus de fun, voir mon [fichier](https://github.com/robertvandeneynde/python/blob/master/uniutils.py)
+| Here is the definition of my function `uniline`, for more fun, see my [file](https://github.com/robertvandeneynde/python/blob/master/uniutils.py) called}}
+[`uniutils.py`](https://github.com/robertvandeneynde/python/blob/master/uniutils.py){{ |}}:
 
     import unicodedata
     

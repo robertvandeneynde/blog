@@ -1,0 +1,28 @@
+Tu as un DOSSIER d'un POTE, tu le copies sur ta machine dans un dossier appelé ```projet-poto```
+Tu te dis "J'aimerais le modifier mais j'ai peur de tt casser, on ne sait jamais"
+$ cp -r projet-poto projet-poto.old # backup
+Oui, à cette époque, ton cerveau ne pensait pas *git*.
+
+Donc tu travailles sur projet-poto, modifiant des stuffs.
+Et puis tu te fais "maan, pk j'avais pas fait de git avant '_'
+
+$ cd projet-proto.old
+$ git init
+$ git add .
+$ git commit -am Original
+
+Et là, il faut "copier les nouveaux fichiers", et t'as pas confiance en l'outil "fusionner deux dossier" de windows
+(ça n'existait pas dans les années 90 alors c'est par définition louche).
+Donc tu veux copier Un à un les fichiers :
+
+$ find . -type f | wc -l
+80
+
+On n'est pas sorti de l'auberge...
+Et là, tu te rappelle que git, c'est un bête ensemble de noms.
+
+$ *mv projet-proto.old/.git projet-proto*
+$ cd projet-poto
+$ git diff
+
+Tadaaa
