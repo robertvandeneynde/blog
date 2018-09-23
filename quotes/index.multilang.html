@@ -6,15 +6,17 @@
         <title>{{Citations|Quotes}} &mdash; Robert Vanden Eynde</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <style>
-        .side {
-            font-size: 75%;
+        .side, petit, small, side {
+            font-size: 14px;  /* approx 80% */
+            display: inline;
         }
-        /* blockquote::after {
-            content: "— Robert Vanden Eynde"; 
-        } */ /* can't do it in css because of the .permalink added by js */
         .author {
             color: #1166B9; /* 0091ff; */
         }
+        .author::before {
+            content: " — "
+        } /* blockquote::after { content: "— Robert Vanden Eynde"; } could not be done in css because of the .permalink added by js */
+        
         img {
               max-width: 100%;
         }
@@ -151,7 +153,7 @@
                         continue // if it contains an author, it's not be me!
                     var y = document.createElement('span')
                     y.setAttribute('class', 'author')
-                    y.appendChild(document.createTextNode(' — Robert Vanden Eynde'))
+                    y.appendChild(document.createTextNode('Robert Vanden\xa0Eynde'))
                     x.appendChild(y)
                 }
             })();
@@ -222,14 +224,14 @@
     </head>
     <body>
     <div id="wrapper">
-    <h1>{{Citations|Quotes}} &mdash; Robert Vanden Eynde</h1>
+    <h1><a href="/blog">🏠</a> {{Citations|Quotes}} &mdash; Robert Vanden Eynde</h1>
     <div class="lang-change"><img src="../flag-{{en|fr}}.png"/> <a href="index.{{en|fr}}.html" lang="{{en|fr}}" hreflang="{{en|fr}}">{{English here!|Français ici !}}</a></div>
     
     <p>{{ Je n'aime pas me répéter, donc j'écris des choses sur mon site, et parfois <strong>une seule phrase</strong> marque mieux l'esprit qu'un long récit !
         | I don't like to repeat myself, so I write things on my site, and sometimes <strong>one sentence</strong> is more memorable than a long story! }}</p>
 
-    <p>{{ <!-- TODO: fr -->
-        <em>Triple click on the text</em> then <em>Ctrl+C</em> to copy, <em>Right click on the hashtag</em> then <em>Copy link</em> to share. }}</p>
+    <p>{{ Pour <strong>partager</strong>, <em>Triple clic sur le texte</em> puis <em>Ctrl+C</em> pour copier, <em>Clic droit sur le #hashtag</em> puis <em>Copier l'addresse du lien</em>.
+        | To <strong>share</strong>, <em>Triple click on the text</em> then <em>Ctrl+C</em> to copy, <em>Right click on the #hashtag</em> then <em>Copy link</em>. }}</p>
 
     <blockquote id="no-mouse">
         {{ Sérieusement, qui a besoin d'une souris pour éditer du texte ?
@@ -244,8 +246,10 @@
     <blockquote id="I-know-nothing">
         {{ La seule chose que je sais, c'est que je ne sais rien
          | The only thing I know is that I know nothing }}
-        <span class="author">&mdash; {{Socrate|Socrates}}</span>
+        <span class="author">{{Socrate|Socrates}}</span>
     </blockquote>
+
+    <!-- Mes emoji préférés c'est 🤔 et 🤷 -->
     
     <blockquote id="functionalities">
         {{ Ne vous attachez pas aux programmes, attachez vous aux fonctionnalités (et débrouillez vous pour trouver un ou des programmes qui font ce que vous voulez, et non l'inverse!)
@@ -259,9 +263,23 @@
         Il faut « Juste »
         « Il suffit »...
         c'est subjectif !
-        « Directement » pour moi ce n'est pas « Directement » pour toi.
-        Essaie d'enlever le mot de la phrase pour voir ?
-        Oh mince, la phrase est plus courte et plus utile !
+        
+        <p>« Directement » pour moi ce n'est pas « Directement » pour toi.
+        <p>Essaie d'enlever le mot de la phrase pour voir ?
+           Oh mince, la phrase est plus courte et plus utile !</p>
+        
+        <petit>
+
+        <p>Quand on explique, utiliser ces mots permet uniquement 
+        de mettre en avant que l'action décrite est <strong>facile</strong>
+        à faire pour le <strong>locuteur</strong> (la personne qui parle).
+
+        <p>Quand on enseigne, ça permet donc de montrer à l'élève que la tâche qui suit 
+        est simple pour l'enseignant, et indique qu'à court terme
+        devrait être simple pour l'élève aussi.
+        
+        <p>Exemple <em>Envoyez moi votre attestation par fax, par mail, ou <strong>directement</strong> par la poste à l'addresse «...»</em>
+        </petit>
     </blockquote>
     
     <blockquote id="what-you-dont-know">
@@ -326,13 +344,65 @@
         et le langage de <em>chat</em> (fait pour communiquer rapidement avec un clavier et donc minimiser le nombre de caractères).
 
         En informatique il y a les scripts et la ligne de commande.
-        }} <!-- TODO: en -->
+        }}
     </blockquote>
 
     <blockquote>
-        {{ Things change, deal with it... But change is annoying. }}
-        <!-- TODO: fr -->
+        {{ Things change, deal with it... <side>But change is annoying</side> }}
     </blockquote>
+    
+    <blockquote>
+        {{Fumer pue|Smoking stinks}}
+    </blockquote>
+    
+    <blockquote>
+        {{ Je n'ai pas à attendre la machine, c'est elle qui doit m'attendre <petit>et quand je l'attend, je lance une autre tâche en parallèle</petit> }}
+    </blockquote>
+    
+    <blockquote id="fast-slow">
+        {{ Si je vais vite, il faut le dire, si je vais trop lentement, il faut le dire }}
+    </blockquote>
+
+    <blockquote>
+         {{ La programmation c'est comme une langue avec 10 mots de vocabulaire }}
+    </blockquote>
+
+    <!-- TODO: fr -->
+    <blockquote id="know-more-choose-better">
+        {{ The more you know, the better you can choose }}
+    </blockquote>
+    
+    <blockquote>
+        {{ Si c'est trop lent, c'est que tu ne le fais pas bien... <petit>Il y a sûrement un outil plus adapté.</petit> }}
+    </blockquote>
+    
+    <blockquote>
+        {{ You know how you're supposed to get stuff ? With <strong>MONEY</strong>
+         | You know how you're supposed to get stuff ? With <strong>MONEY</strong> }}
+        <span class="author">Rick in Rick &amp; Morty</span>
+        <span class="side">
+            {{ Une explication plus profonde de cette phrase est à venir. }}
+        </span>
+    </blockquote>
+    
+    <blockquote>
+        {{ Supprimer des fichiers ou fermer des onglets ? Pas le temps pour ça
+        | Delete files or close tabs ? Ain't no time for that }}
+    </blockquote>
+    
+    <blockquote id="code-is-think-code-is-communication">
+        {{ Faire de l'informatique ce n'est pas juste coder, ça change ta manière de penser, ça change la manière dont tu traites l'information et la communique, ça change ta communication avec les machines et les humains }}
+    </blockquote>
+    
+    <blockquote>
+        {{ Qui peut le plus peut le moins }}
+        <span class="author">{{Probablement pas moi|Probably not me}}</span>
+    </blockquote>
+
+    <blockquote>
+        {{ Mieux vaut deux fois que zéro | Better two times than zero }}
+    </blockquote>
+    
     
     <!-- blockquote MUST be closed to avoid nesting -->
     <!-- <blockquote id="{english_id}">
