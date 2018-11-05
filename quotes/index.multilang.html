@@ -6,9 +6,16 @@
         <title>{{Citations|Quotes}} &mdash; Robert Vanden Eynde</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <style>
-        .side, petit, small, side {
+        .side, petit, small, side, .more {
             font-size: 14px;  /* approx 80% */
             display: inline;
+        }
+        div.more {
+            margin: 10px 0 10px 0;
+        }
+        .more p {
+            border-left: 3px solid #ddd;
+            padding-left: 10px;
         }
         .author {
             color: #1166B9; /* 0091ff; */
@@ -268,8 +275,7 @@
         <p>Essaie d'enlever le mot de la phrase pour voir ?
            Oh mince, la phrase est plus courte et plus utile !</p>
         
-        <petit>
-
+        <div class="more">
         <p>Quand on explique, utiliser ces mots permet uniquement 
         de mettre en avant que l'action décrite est <strong>facile</strong>
         à faire pour le <strong>locuteur</strong> (la personne qui parle).
@@ -279,7 +285,7 @@
         devrait être simple pour l'élève aussi.
         
         <p>Exemple <em>Envoyez moi votre attestation par fax, par mail, ou <strong>directement</strong> par la poste à l'addresse «...»</em>
-        </petit>
+        </div>
     </blockquote>
     
     <blockquote id="what-you-dont-know">
@@ -290,25 +296,25 @@
     <blockquote id="teaching-is-repeating">
         {{ Enseigner, c'est répéter
          | Teaching is repeating }}
-         <span class="author">{{Probablement pas moi|Probably not me}}</span>
+         <span class="author">{{L'auteur n'est probablement pas moi|The author is probably not me}}</span>
     </blockquote>
     
     <blockquote id="standards">
-        Parfois on peut choisir l'un ou l'autre sans
+        Les <strong>standards</strong> c'est quand on peut choisir l'un ou l'autre sans
         que l'un soit meilleur que l'autre,
         mais c'est plus pratique si tout le monde choisit la même chose.
 
         <span class="side">
-            Les <strong>standards</strong>
-            aident (comme le Français standard,
-            les formats de date, 
-            ou l'HTML...).
+            Nous avons, le <em>Français standard</em>,
+            les <em>formats de date</em> standardisés par ISO,
+            l'<em>HTML</em> standardisé par <a href="//W3C.org">W3C.org</a>
+            et bien d'autres.
         </span>
         
     </blockquote>
     
     <blockquote id="orthogonality">
-        {{Orthogonalité|Orthogonality}},
+        {{L'orthogonalité|Orthogonality}},
         {{comment tout faire en ne connaissant rien (ou très peu)
          |how to do everything with nothing (or a little)}}
     </blockquote>
@@ -318,11 +324,11 @@
          | Code on dark theme, otherwise it's like looking at a lightbulb into the eyes (that's painful) }}
         
         <span class="side">
-        {{ Sauf la journée en plein soleil, le fond clair est plus lisible dans ce cas.
-         | Except during the day when the sun is shining hard, in that case the light theme is more readable. }}
+        {{ Sauf la journée en plein soleil, le fond clair est plus lisible dans ce cas
+         | Except during the day when the sun is shining hard, in that case the light theme is more readable }}
         </span>
         
-        <span class="author">{{Pas moi|Not me}}</span>
+        <span class="author">{{L'auteur n'est pas moi|The author is not me}}</span>
     </blockquote>
     
     <blockquote id="gui-discoverability">
@@ -396,13 +402,19 @@
     
     <blockquote>
         {{ Qui peut le plus peut le moins }}
-        <span class="author">{{Probablement pas moi|Probably not me}}</span>
+        <span class="author">{{L'auteur n'est pas moi|The author is not me}}</span>
     </blockquote>
 
     <blockquote>
         {{ Mieux vaut deux fois que zéro | Better two times than zero }}
     </blockquote>
     
+    <blockquote id="different-expressiveness">
+        {{ Faire de l'informatique c'est parler en mots alors que les autres parlent en lettres, et déjà parler en phrase alors qu'ils viennent d'apprendre les mots
+         | Knowing how to use a computer, it's like talking with words when the others speak with letters, and already speak with sentences when they just learned about words }}
+    </blockquote>
+
+    <!-- There are only two hard things in Computer Science: cache invalidation and naming things. - Phil Karlton -->
     
     <!-- blockquote MUST be closed to avoid nesting -->
     <!-- <blockquote id="{english_id}">
@@ -413,4 +425,9 @@
         <span class="author">AuthorIfNotRobert Else DeleteLine</span>
     </blockquote> -->
     
-</div></body></html> <!-- end of file friendly (only one line) to be quickly editable via `vim + file.txt` -->
+</div></body></html> <pre><!-- end of file friendly (only one line) to be quickly editable via `vim + file.txt` -->
+#thinking-in-phrases
+Tell me something I <strong>don't</strong> know (when someone tells me something very obvious like "I like to have fun with my friends")
+Pas le temps de niaiser
+Pour des raisons que je connais
+{{Et c'est pourquoi je suis prof d'informatique|And thaaat's why I am a computer science teacher}}
