@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="{{fr|en}}">
+    <!-- generated from .multilang.md.html -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>{{Unicode, c'est cool|Unicode is cool}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+        img {
+              max-width: 100%;
+        }
+        .smallcaps {
+            font-variant: small-caps;
+        }
+        .permalink {
+            margin-left: 0.2em;
+            color: #1166B9;
+        }
+        .lang-change {
+            margin-bottom: 10px;
+        }
+        [id]:not([id=wrapper]) {
+            transition: background linear 1s;
+        }
+        .selected {
+            background: #ffff66;
+        }
+        #wrapper {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+            box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+            background: white;
+        }
+        /*kbd {
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            margin: 0 0.2em;
+            box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+            background-color: #f7f7f7;
+        }*/
+        /*
+        kbd {
+            font-family: Menlo,Monaco,Consolas,'Courier New',monospace;
+            line-height: 1.57142857;
+            text-transform: capitalize;
+            border-width: 1px 1px 3px 1px;
+            border-style: solid;
+            border-color: #e0e0e0;
+            border-bottom-color: #dbdbdb;
+            border-radius: 5px;
+            background: #f0f0f0 url(http://media02.hongkiat.com/v4s/key_bg.png) repeat-x;
+            text-shadow: 1px 1px #fff;
+            padding: 2px 5px;
+            font-size: 14px;
+            font-size: 1.4rem;
+        }*/
+        body {
+            padding: 10px;
+        }
+        nav {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            display: inline-block !important;
+            background: rgba(250, 250, 250, .8); /* #fafafacc; hexadecimal with hex value https://stackoverflow.com/a/31029864/1980630 */ /* https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgba() */
+            margin: 5px;
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px;
+            border-left: 1px solid #ccc;
+            white-space: nowrap;
+        }
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+        <!-- <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" /> -->
+        <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            ;(function(){
+                var T = document.querySelectorAll('[id]')
+                for(var i = 0; i < T.length; i++) {
+                    var x = T[i]
+                    var id = x.getAttribute('id')
+                    if(id == 'wrapper')
+                        continue;
+                    
+                    var y = document.createElement('a') // '<a href="#{id}">#{id}</a>'.replace(/\{id\}/g, id)
+                    y.setAttribute('href', '#' + id)
+                    y.setAttribute('class', 'permalink')
+                    var t = document.createTextNode('#' + id)
+                    y.appendChild(t)
+                    
+                    x.parentElement.insertBefore(y, x.nextSibling)
+                }
+            })();
+            
+            ;(function(){
+                if(document.location.hash && document.location.hash != '#') {
+                    var id = document.location.hash.slice(1)
+                    var e = document.getElementById(id)
+                    e.classList.add('selected')
+                    setTimeout(function(){
+                        e.classList.remove('selected')
+                    }, 5000)
+                }
+            })();
+            
+            ;(function(){
+                var T = document.querySelectorAll('a[href^="#"]')
+                for(var i = 0; i < T.length; i++) {
+                    var x = T[i]
+                    x.addEventListener('click', function(){
+                        var e = document.getElementById(this.getAttribute('href').slice(1))
+                        e.classList.add('selected')
+                        setTimeout(function(){
+                            e.classList.remove('selected')
+                        }, 5000)
+                    })
+                }
+            })();
+        })
+        </script>
+        
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="/parascolaire/utils.js"></script>
+        
+        <link id="stylesheet" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+        <script>
+            $(function(){
+                // utils.dedentPreCode()
+                // hljs.initHighlightingOnLoad()
+            })
+        </script>
+
+    </head>
+    <body>
+    <div id="wrapper">
+{% markdown %}
+# Protocole de question:
+<em>Si vous avez une question, vérifier les points de cette liste</em>
+## 1) Demander à votre voisin
+
+J'aime quand vous parlez entre vous, et en plus si votre voisin répond, moi je ne dois plus travailler, jsui lazy. Plus sérieusement, si votre voisin répond, je peux passer plus de temps sur des sujets plus compliqués, passer plus de temps avec les élèves ayant des difficultés par exemple.
+
+## 2) Lisez la théorie
+
+À chaque séance je dis des choses, je le répète, mais elles sont écrites, de plus, je n'ai pas l'occasion de tout dire, la majorité des questions m'ont déjà été posées et elles sont souvent juste au bon endroit dans la théorie.
+
+## 3) Votre autre voisin
+
+Mettez vous tous les un à côté de l'autre de telle sorte que vous avez deux voisins en moyenne !  Ça me fait deux fois moins de travail (voir point 1).
+    
+Cependant, attention aux voisins, ils ne savent pas toujours bien expliquer car ils n'ont pas mon expérience de pédagogie.
+
+## 4) Google <span style="font-size:small">(si vous en avez les compétences)</span>
+
+Les moteurs de recherche comme Google, duckduckgo ou ecosia regorgent d'informations, votre question a été sûrement déjà posée, et des sites comme stackoverflow (stackexchange) ou quora sont extrêmement bien fait pour les réponses courtes aux questions précises.
+
+## 5) Monsieeeeur
+
+N'hésitez pas à quand même me poser des questions, soit parceque vos voisins de savent pas ou n'ont pas envie de vous répondre (c'est leur choix), ou que google ne vous donne pas la réponse dans un temps raisonnable de 20 secondes.
+
+Cependant, sachez que je tourne parmis vous, chacun aura le même "temps de Robert", pas de favoritisme.
+
+Exception à la règle: certains élèves ont besoin de plus de temps ou sont turbulents, ils ne sont pas bêtes pour autant, rappelez vous de ceci toute votre vie :
+
+Ne pensez jamais que vous êtes bêtes, ça n'est pas efficace.
+
+## 0) Réfléchissez 2 secondes
+
+Je ne l'ai pas dit car logiquement c'est évident, mais juste le fait de formuler sa question fait que parfois l'on y répond de suite !
+
+{% endmarkdown %}
+</div></body></html>
+<!-- <pre> -->
