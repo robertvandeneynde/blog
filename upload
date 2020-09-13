@@ -1,3 +1,3 @@
 cd /home/robert/blog
-rsync -r * robert@robertvandeneynde.be:siteperso/blog/
+rsync -rt * robert@robertvandeneynde.be:siteperso/blog/ | grep -v '^skipping directory' | grep -v '^skipping non-regular file'
 # rsync --links * robert@robertvandeneynde.be:siteperso/blog/

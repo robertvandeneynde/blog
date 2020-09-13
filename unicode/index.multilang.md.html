@@ -500,9 +500,13 @@ You can for example choose that <kbd>AltGr</kbd>+<kbd>w</kbd> produces the "**«
 - {{Sur le clavier belge, il y a une touche morte Accent aigu **et** accent grave sur|On Belgian Keyboard there is a dead key for Acute accent **and** Grave accent on}} <kbd>AltGr+ù</kbd> {{et|and}} <kbd>AltGr+µ</kbd>.
 - {{Aucun de ces claviers permet le|None of those keyboards gives you}} **Ç** {{ou les guillemets|or the guillemets}} "**«»**" {{ou [l'espace insécable](#nbsp)|or the [non breaking space](#nbsp)}}.
 - {{Le [clavier BÉPO](https://en.wikipedia.org/wiki/Keyboard_layout#B%C3%89PO) est un bon clavier ergonomique pour tapper en français mais il est très différent de QWERTY ou AZERTY. Cependant il a beacuoup de caractères utiles à la typographie française comme **« » É Ç** et [l'espace insécable](#nbsp).|The [BÉPO keyboard](https://en.wikipedia.org/wiki/Keyboard_layout#B%C3%89PO) is a good ergonomic keyboard to write in French but is very different from QWERTY and AZERTY. However, it contains a lot of characters used in French typography like **« » É Ç** and [the non breaking space](#nbsp)}}
+- Le clavier belge sur Linux par défaut permet "ÉÈÇÙ" majuscules, "«»" et même "œæ" et a une touche morte de cédille. Et vu que c'est linux, c'est super facile de customiser son clavier (il suffit de modifier un fichier texte).
+- À mon humble avis, on devrait créer un "clavier français europpéen" où les 26 lettres sont **comme le qwerty**, où les touches mortes pour les accents existent (pourquoi pas la cédille), où les guillemets sont en Alt+Gr (je propose "AltGr+W, AltGr+X" pour compatibilité avec linux). En passant, je vote pour "·" (utilisé en langage inclusif (langage de genre inclusif)) et "×" (pourquoi pas "÷" et "−") et sous Windows laisser une option qui dit que ShiftLock = CapsLock... Oui ShiftLock est utile pour tapper vite des numéros sur clavier non full (très courant pour des laptop ≤ 14 pouces).
 
 ## <span id="webapp-keyboard">{{Clavier virtuels sur le web|Virtual keyboards on the web}}</span>
 - {{Tapper rapidement des caractères en plein de langues|Fastly write characters in lots of languages}} — [Lexilogos](http://www.lexilogos.com/clavier/francais.htm) {{ou|or}} [Type It](http://typeit.org).
+  
+  Très pratique quand on est, je conseille d'épingler l'onglet, voire de l'avoir dans une nouvelle fenêtre de petite taille, et de connaître Alt+Tab !
 
 ## <span id="python">{{Opérations Unicode|Unicode operations}}</span>
 {{Python a un support built-in d'unicode depuis la version 3, en python 2 il y a avait deux typles de strings, les strings <em>normales</em> et les strings <em>unicode</em>. Python a également un module <span style="white-space: nowrap;">`import unicodedata`</span> pour des opérations plus complexes liées à l'Unicode.
@@ -520,8 +524,8 @@ You can for example choose that <kbd>AltGr</kbd>+<kbd>w</kbd> produces the "**«
      "U+03B2 β GREEK SMALL LETTER BETA",
      "U+03B3 γ GREEK SMALL LETTER GAMMA"]
 
-{{Voici la définition de la fonction `uniline`, pour plus de fun, voir mon [fichier](https://github.com/robertvandeneynde/python/blob/master/uniutils.py)
-| Here is the definition of my function `uniline`, for more fun, see my [file](https://github.com/robertvandeneynde/python/blob/master/uniutils.py) called}}
+{{Voici la définition de la fonction `uniline`, pour plus de fun, [voir mon fichier](https://github.com/robertvandeneynde/python/blob/master/uniutils.py)
+| Here is the definition of my function `uniline`, for more fun, [see my file](https://github.com/robertvandeneynde/python/blob/master/uniutils.py) called}}
 [`uniutils.py`](https://github.com/robertvandeneynde/python/blob/master/uniutils.py){{ |}}:
 
     import unicodedata
@@ -552,4 +556,7 @@ You can for example choose that <kbd>AltGr</kbd>+<kbd>w</kbd> produces the "**«
     </body>
 
 </html>
+<pre>
+More readings
 
+https://docs.python.org/fr/3.7/howto/unicode.html

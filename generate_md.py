@@ -23,7 +23,7 @@ class OutFile:
 
 def by_markdown(string):
     to_md = textwrap.dedent(string)
-    p = subprocess.Popen('/home/robert/Markdown_1.0.1/Markdown.pl', stdout=subprocess.PIPE, stdin=subprocess.PIPE)
+    p = subprocess.Popen('/home/robert/nonpython/markdown.pl', stdout=subprocess.PIPE, stdin=subprocess.PIPE)
     p.stdin.write(to_md.encode('utf-8'))
     p.stdin.close()
     return p.stdout.read().decode('utf-8')
